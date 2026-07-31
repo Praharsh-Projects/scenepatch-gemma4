@@ -49,8 +49,8 @@ show the actual elapsed time; retain the uncut run and its hash.
 
 | Item | Value to record |
 |---|---|
-| App commit SHA | `[REQUIRED]` |
-| Public app and repository URLs | `[REQUIRED]` |
+| Verified application commit SHA | `8615f1272e87d506805ba46d16f9ab56904ff0a1` |
+| Public app and repository URLs | [app](https://praharsh-projects.github.io/scenepatch-gemma4/) · [repository](https://github.com/Praharsh-Projects/scenepatch-gemma4) |
 | Public Kaggle notebook URL | `[REQUIRED]` |
 | Approved fixture hashes | `[REQUIRED]` |
 | Kaggle image, GPU, Python, PyTorch, Transformers | `[REQUIRED]` |

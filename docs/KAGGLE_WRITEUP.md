@@ -103,7 +103,9 @@ model identifier, intent summary, image-thumbnail hashes, validated change
 records, decision, and measured timing. Audio is discarded after inference by
 default; images are retained only after an explicit choice.
 
-The intended primary public host is GitHub Pages at `[REQUIRED PUBLIC APP URL]`.
+The primary public host is GitHub Pages at
+[praharsh-projects.github.io/scenepatch-gemma4](https://praharsh-projects.github.io/scenepatch-gemma4/).
+Anonymous access and the complete replay flow were verified on 31 July 2026.
 There is no ScenePatch account or application API. This release makes no offline
 inference claim; the public experience does not run the browser model.
 
@@ -153,8 +155,8 @@ instead of disguising them.
 
 ## Links
 
-- Live app: `[REQUIRED AFTER ANONYMOUS DEPLOYMENT TEST]`
-- Source and architecture: `[REQUIRED PUBLIC REPOSITORY URL]`
+- Live app: [ScenePatch on GitHub Pages](https://praharsh-projects.github.io/scenepatch-gemma4/)
+- Source and architecture: [public Apache-2.0 repository](https://github.com/Praharsh-Projects/scenepatch-gemma4)
 - Reproducibility notebook: `[REQUIRED PUBLIC KAGGLE NOTEBOOK URL]`
 - Two-minute demonstration: `[REQUIRED PUBLIC VIDEO URL]`
 - Gemma function-calling reference: [Google AI for Developers](https://ai.google.dev/gemma/docs/capabilities/text/function-calling-gemma4)

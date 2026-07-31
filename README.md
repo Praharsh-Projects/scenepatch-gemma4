@@ -56,7 +56,7 @@ competition draft.
 |---|---|
 | Strict tool policy and fail-closed storage | Automated unit tests |
 | Production and GitHub Pages builds | Automated build and rendered-HTML tests |
-| Anonymous public app/repository | Verify the links above in a fresh profile |
+| Anonymous public app/repository | HTTP 200 and fresh-browser flow verified 31 July 2026 |
 | Browser image + voice Gemma mechanism | Loaded, inferred, and parsed on M4 Pro; semantic gate failed |
 | Missing-marker block | **Failed:** browser model proposed a clean commit |
 | Five clean and five blocked hero trials | Not run after the first required bad-scene failure |

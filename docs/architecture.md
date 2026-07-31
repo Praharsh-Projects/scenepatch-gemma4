@@ -135,12 +135,14 @@ IndexedDB record also deletes any retained image blobs contained in that record.
 
 ## Offline and deployment behavior
 
-GitHub Pages is the intended primary public host; its live URL is **TBD until a
-successful deployment**. Its build flag enables scripted replay mode and disables
-the browser model action. The experimental local-development path still exposes
-model loading for inspection. The Pages service worker precaches its replay UI,
-CSS, manifest, and icons while deliberately excluding the experimental model
-worker and ONNX Runtime WebAssembly from automatic replay downloads.
+GitHub Pages is the primary public host at
+[praharsh-projects.github.io/scenepatch-gemma4](https://praharsh-projects.github.io/scenepatch-gemma4/).
+The anonymous HTTPS deployment and complete replay flow were verified on 31 July
+2026. Its build flag enables scripted replay mode and disables the browser model
+action. The experimental local-development path still exposes model loading for
+inspection. The Pages service worker precaches its replay UI, CSS, manifest, and
+icons while deliberately excluding the experimental model worker and ONNX
+Runtime WebAssembly from automatic replay downloads.
 
 Two different claims require different tests:
 
@@ -188,8 +190,8 @@ submission blockers:
 
 | Evidence | Required record | Current status |
 |---|---|---|
-| Public app | Anonymous URL and fresh-profile screenshot | **TBD—not deployed; replay mode required** |
-| Public repository | Anonymous URL and license check | **Repository created; source not yet pushed** |
+| Public app | Anonymous URL and fresh-browser interaction | **Passed—HTTPS replay deployed and block/correct/confirm/history flow verified** |
+| Public repository | Anonymous URL and license check | **Passed—public source and Apache-2.0 license available** |
 | Browser model integration | Console/model ID plus captured native tool output | **Mechanism passed; semantic bad-scene gate failed** |
 | Initial load | Download bytes and elapsed time | **Exact weight bytes known; first-load elapsed time not captured** |
 | Warm load | Cached runtime load on release machine | **5.0 s observation; not a benchmark** |
