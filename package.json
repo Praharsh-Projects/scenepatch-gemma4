@@ -1,0 +1,50 @@
+{
+  "name": "scenepatch-gemma4",
+  "version": "1.0.0",
+  "description": "Git-style semantic change control for physical creative setups, powered locally by Gemma 4 E2B.",
+  "license": "Apache-2.0",
+  "private": true,
+  "engines": {
+    "node": ">=22.13.0"
+  },
+  "scripts": {
+    "dev": "WRANGLER_LOG_PATH=.wrangler/wrangler.log vinext dev",
+    "build": "WRANGLER_LOG_PATH=.wrangler/wrangler.log vinext build",
+    "build:pages": "SCENEPATCH_STATIC_EXPORT=true NEXT_PUBLIC_SCENEPATCH_REPLAY_MODE=true WRANGLER_LOG_PATH=.wrangler/wrangler.log vinext build && node scripts/inject-pages-precache.mjs && node scripts/verify-pages-replay.mjs",
+    "start": "WRANGLER_LOG_PATH=.wrangler/wrangler.log vinext start",
+    "test": "npm run test:unit && npm run test:render",
+    "test:unit": "vitest run --config vitest.config.ts",
+    "test:render": "npm run build && node --test tests/rendered-html.test.mjs",
+    "lint": "eslint . --ignore-pattern dist --ignore-pattern .next",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@huggingface/transformers": "^4.2.0",
+    "lucide-react": "^0.468.0",
+    "next": "16.2.12",
+    "react": "19.2.8",
+    "react-dom": "19.2.8",
+    "zod": "^4.4.3"
+  },
+  "devDependencies": {
+    "@cloudflare/vite-plugin": "1.49.1",
+    "@testing-library/jest-dom": "6.9.1",
+    "@testing-library/react": "16.3.2",
+    "@types/node": "22.19.19",
+    "@types/react": "19.2.14",
+    "@types/react-dom": "19.2.3",
+    "@vitejs/plugin-react": "6.0.5",
+    "@vitejs/plugin-rsc": "0.5.32",
+    "eslint": "9.39.4",
+    "eslint-config-next": "16.2.12",
+    "fake-indexeddb": "6.2.5",
+    "jsdom": "^26.1.0",
+    "react-server-dom-webpack": "19.2.8",
+    "typescript": "5.9.3",
+    "vinext": "0.0.50",
+    "vite": "8.2.0",
+    "vitest": "4.1.10",
+    "wrangler": "4.117.0"
+  },
+  "type": "module"
+}

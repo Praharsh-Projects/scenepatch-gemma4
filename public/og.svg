@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b0f0d"/>
+      <stop offset="1" stop-color="#13211c"/>
+    </linearGradient>
+    <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse">
+      <path d="M48 0H0V48" fill="none" stroke="#d8ff63" stroke-opacity=".055"/>
+    </pattern>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#000" flood-opacity=".35"/>
+    </filter>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <rect width="1600" height="900" fill="url(#grid)"/>
+  <g font-family="Inter,Arial,sans-serif">
+    <text x="108" y="126" fill="#8ad9ff" font-size="25" font-weight="700" letter-spacing="5">SEMANTIC CHANGE CONTROL</text>
+    <text x="108" y="245" fill="#f7f4e9" font-size="88" font-weight="800">Scene</text>
+    <text x="350" y="245" fill="#d8ff63" font-size="88" font-weight="800">Patch</text>
+    <text x="108" y="322" fill="#f7f4e9" font-size="47" font-weight="650">Commit the change you meant.</text>
+    <text x="108" y="380" fill="#d8ff63" font-size="47" font-weight="650">Block the one you didn’t.</text>
+    <text x="108" y="464" fill="#b7c2bc" font-size="28">Fixture replay · executable Gemma 4 notebook · fail-closed policy</text>
+    <g transform="translate(108 535)">
+      <rect width="210" height="58" rx="29" fill="#d8ff63"/>
+      <text x="105" y="38" text-anchor="middle" fill="#0b0f0d" font-size="21" font-weight="800">LOCAL-FIRST</text>
+      <rect x="228" width="260" height="58" rx="29" fill="none" stroke="#8ad9ff" stroke-width="2"/>
+      <text x="358" y="38" text-anchor="middle" fill="#8ad9ff" font-size="21" font-weight="750">HUMAN CONFIRMED</text>
+    </g>
+  </g>
+  <g transform="translate(965 118)" filter="url(#shadow)">
+    <rect width="510" height="660" rx="38" fill="#18231f" stroke="#33483f" stroke-width="3"/>
+    <text x="48" y="67" fill="#8ad9ff" font-family="monospace" font-size="20" font-weight="700">PHYSICAL PATCH</text>
+    <rect x="48" y="105" width="414" height="260" rx="22" fill="#d9cbb4"/>
+    <rect x="158" y="185" width="205" height="142" rx="8" fill="#fffdf6" stroke="#202621" stroke-width="5"/>
+    <rect x="205" y="126" width="112" height="55" fill="#ffd84f"/>
+    <rect x="103" y="190" width="24" height="125" rx="10" fill="#f04f4f"/>
+    <rect x="401" y="190" width="24" height="125" rx="10" fill="#3f78ef"/>
+    <path d="M70 399h370" stroke="#33483f" stroke-width="2"/>
+    <g font-family="Arial,sans-serif">
+      <circle cx="75" cy="451" r="20" fill="#d8ff63"/>
+      <path d="m65 451 7 8 14-17" fill="none" stroke="#0b0f0d" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="112" y="460" fill="#f7f4e9" font-size="24" font-weight="700">Red marker moved</text>
+      <circle cx="75" cy="517" r="20" fill="#f04f4f"/>
+      <text x="75" y="526" text-anchor="middle" fill="#fff" font-size="24" font-weight="800">!</text>
+      <text x="112" y="526" fill="#f7f4e9" font-size="24" font-weight="700">Blue marker missing</text>
+      <rect x="48" y="570" width="414" height="55" rx="13" fill="#f04f4f" fill-opacity=".14" stroke="#f04f4f" stroke-width="2"/>
+      <text x="255" y="606" text-anchor="middle" fill="#ff8b8b" font-size="20" font-weight="800" letter-spacing="2">COMMIT BLOCKED</text>
+    </g>
+  </g>
+</svg>

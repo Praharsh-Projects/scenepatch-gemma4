@@ -1,0 +1,38 @@
+ScenePatch
+Copyright 2026 ScenePatch contributors
+
+ScenePatch is licensed under the Apache License, Version 2.0. See LICENSE.
+
+ScenePatch does not redistribute Gemma model weights. At runtime, the application
+loads the separately published Gemma 4 E2B IT ONNX model from Hugging Face. The
+Python reproducibility notebook references Google's separately published
+google/gemma-4-E2B-it checkpoint. Those model artifacts remain subject to the
+license and notices published with their respective model repositories.
+
+Gemma is a trademark of Google LLC. ScenePatch is an independent hackathon
+project and is not sponsored by or endorsed by Google LLC or Hugging Face, Inc.
+
+Primary runtime components:
+
+- React and React DOM — Meta Platforms, Inc. and contributors — MIT License.
+- Next.js — Vercel, Inc. and contributors — MIT License.
+- Transformers.js — Hugging Face, Inc. and contributors — Apache License 2.0.
+- Zod — Colin McDonnell and contributors — MIT License.
+- Lucide — Lucide contributors — ISC License.
+- ONNX Runtime Web, distributed transitively by Transformers.js — Microsoft
+  Corporation and contributors — MIT License.
+
+Referenced model artifacts:
+
+- onnx-community/gemma-4-E2B-it-ONNX, revision
+  9f4bef82ea6e296bc69f8a2f5939f73af81b07a6 — Apache License 2.0 as declared by
+  its model repository; derived from google/gemma-4-E2B-it.
+- google/gemma-4-E2B-it, revision
+  3e22461f65e89153144f8adb70e3b8c2cc9845a7 — Apache License 2.0 as declared by
+  its model repository.
+
+The full resolved JavaScript dependency inventory and versions are recorded in
+package-lock.json. All third-party copyrights and license terms remain with
+their respective owners. Review the model cards and dependency license files
+before redistribution; this repository downloads model artifacts at runtime and
+does not bundle them.
