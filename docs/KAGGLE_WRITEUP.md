@@ -11,9 +11,9 @@ creative scene changed the way its owner intended.
 >
 > **Current fallback state:** the pinned browser q4f16 runtime loaded and emitted
 > native calls, but missed the blue-marker removal and proposed a commit. The
-> public Pages build is therefore a labeled scripted fixture replay. The official
-> `google/gemma-4-E2B-it` Kaggle notebook is the primary executable model path and
-> still requires an approved fixture run before this draft can be submitted.
+> public Pages build is therefore a labeled scripted replay. The official
+> `google/gemma-4-E2B-it` notebook is the executable model path; its hashed-fixture
+> run, outputs, media approval, and public URL remain submission blockers.
 
 ## The problem
 
@@ -50,6 +50,13 @@ marker is gone. That unexplained change must block the patch. In the corrected
 image, the blue marker is restored, and the user—not the model—can confirm the
 clean patch.
 
+The release fixture is deliberately synthetic for reproducibility and provenance:
+four deterministic code-generated 640×512 PNGs represent the controlled scenes,
+and a 4.755-second CMU Flite `slt` clip renders the instruction. These are mechanism
+inputs, not photographs, natural speech, evidence of a physical desk, or proof of
+real-world accuracy. Their exact hashes and pending human release gate are recorded
+in [`docs/FIXTURE_RIGHTS.md`](FIXTURE_RIGHTS.md).
+
 ## Why Gemma 4 is essential
 
 ScenePatch uses the Gemma 4 E2B instruction-tuned model because this task requires
@@ -68,7 +75,7 @@ the web interface. It is an independent mechanism check: its unquantized runtime
 and preprocessing are documented separately rather than presented as a
 pixel-identical reproduction of the browser path.
 
-Gemma receives one labeled image, one normalized voice clip, a compact system
+Gemma receives one labeled image, one normalized audio clip, a compact system
 instruction, and exactly three native function declarations:
 
 - `record_change(description, classification)` records evidence;
@@ -109,14 +116,18 @@ Anonymous access and the complete replay flow were verified on 31 July 2026.
 There is no ScenePatch account or application API. This release makes no offline
 inference claim; the public experience does not run the browser model.
 
+The primary notebook path is cloud-hosted on Kaggle and will process only this
+nonprivate synthetic fixture after human approval. It does not demonstrate that
+arbitrary user media remains on-device.
+
 ## Evidence, limitations, and impact
 
-The release evaluation will use three creator-owned fixtures after the entrant's
-rights approval: a clean intended
-change, an intended change plus an unexplained removal, and an occluded or poorly
-aligned scene. The latter two are expected to fail closed. The required demo-laptop
-gate is five consecutive correct clean proposals and five consecutive correct
-blocks.
+The release evaluation will use three comparisons built from the same controlled,
+code-generated fixture after human approval: a clean intended change, an intended
+change plus an unexplained removal, and an occluded scene. The latter two are
+expected to fail closed. The planned gate is five consecutive correct clean
+proposals and five consecutive correct blocks, but those official-checkpoint runs
+are still pending.
 
 Browser engineering result from 31 July 2026: on an M4 Pro with Chrome
 150.0.7871.187, the exact pinned q4f16 cache verified and warm model loading took
@@ -124,34 +135,33 @@ Browser engineering result from 31 July 2026: on an M4 Pro with Chrome
 the missing-blue-marker scene even after a disappearance-focused recheck. This is
 reported as a failed gate, not a successful block or accuracy result.
 
-Results still required from the official-checkpoint notebook and approved media:
+Results still required from the official-checkpoint notebook and exact hashed
+synthetic inputs:
 
 - official model load: `[REQUIRED BYTES AND ELAPSED TIME]`;
-- bad-scene notebook inference: `[REQUIRED MEASURED RESULT]`;
-- corrected-scene notebook inference: `[REQUIRED MEASURED RESULT]`;
-- repeated hero-fixture gate: `[REQUIRED PASS/FAIL COUNTS]`;
+- generated bad-scene notebook inference: `[REQUIRED MEASURED RESULT]`;
+- generated corrected-scene notebook inference: `[REQUIRED MEASURED RESULT]`;
+- repeated generated-fixture gate: `[REQUIRED PASS/FAIL COUNTS]`;
 - tested browser/hardware: `[REQUIRED EXACT VERSIONS]`.
 
-These are fixture-level observations, not a claim of general detection accuracy.
+Any resulting numbers will be controlled synthetic-fixture mechanism observations,
+not accuracy evidence for photographs, natural speech, or physical setups.
 ScenePatch can miss small, occluded, or ambiguous changes and can be affected by
 camera angle and lighting. It must not be used for theft detection, compliance,
 hazard assessment, evidence, or any decision where an error could harm someone.
-Uncertainty is visible and blocks progress rather than being hidden behind a
-confident score.
 
 Within that boundary, the idea offers a new interaction: describe a physical
 change, inspect a multimodal semantic diff, and preserve only a human-approved
-version. Local execution gives creative teams a way to experiment with this
-workflow without building a cloud media archive.
+version. The architecture explores local execution, but the release-qualified
+model evidence will come from the cloud-hosted Kaggle notebook; this draft makes
+no claim that its evaluation inputs remain on-device.
 
 ## Sprint challenges and what I learned
 
-The main engineering challenge was not producing prose from two images. It was
-building a narrow trust boundary around a small multimodal model: compact media,
-native tool calls, strict parsing, policy overrides, human confirmation, and
-honest failure states. Browser storage and the multi-gigabyte first model load also
-make “local” different from “instantly offline.” ScenePatch exposes those costs
-instead of disguising them.
+The hardest part was not producing prose from two images; it was building a narrow
+trust boundary around a multimodal model: compact media, native tool calls, strict
+parsing, policy overrides, human confirmation, and honest failure states. The
+multi-gigabyte model also makes “local” different from “instantly offline.”
 
 ## Links
 
@@ -166,8 +176,10 @@ instead of disguising them.
 The [official deadline](https://www.kaggle.com/competitions/build-with-gemma-gdgunn/rules)
 is **3 August 2026 at 23:59 WAT** (22:59 UTC; 4 August at 00:59 CEST); the internal
 target is **18:00 WAT**. Before submission, the entrant must personally approve
-the owned fixture and voice rights, public repository and media release, measured
-claims, rule acceptance, and the final Kaggle submission. Eligibility proof,
-KYC/payout, banking, and tax actions also remain with the human entrant.
+the generated-scene provenance and hashes, CMU Flite and `slt` voice licensing and
+attribution, public repository and media release, measured claims, rule acceptance,
+and the final Kaggle submission. Executed notebook results and the final video also
+remain pending. Eligibility proof, KYC/payout, banking, and tax actions remain with
+the human entrant.
 AI-assisted code and documentation must receive human review; no result may be
 inferred from this draft.

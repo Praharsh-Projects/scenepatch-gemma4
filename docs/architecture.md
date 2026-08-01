@@ -171,6 +171,22 @@ browser profile. Record the browser version, hardware, cache state, and timestam
   fixture. No five-by-five reliability or offline sequence was attempted after
   the core bad-scene failure.
 
+### Controlled submission fixture pack — 1 August 2026
+
+Four 640×512 PNG scenes were exported from
+`app/lib/media.ts#createSyntheticArtDeskFixture` in one recorded Chrome session:
+one common before scene plus bad, corrected, and occluded after scenes. The fixed
+intent sentence was synthesized with the open-source CMU Flite 2.3-current
+`cmu_us_slt` voice, then normalized to 16-bit PCM, 16 kHz mono (4.755 seconds).
+The ignored local `fixtures/private/generated-v1/manifest.json` freezes every
+filename, media property, generator revision, and SHA-256 hash.
+
+This pack is controlled synthetic mechanism evidence. It does not show model
+performance on photographs, natural human speech, or physical scenes. It remains
+**NOT APPROVED FOR PUBLIC USE** until the entrant reviews the exact files and
+completes `docs/FIXTURE_RIGHTS.md`; notebook results remain unclaimed until an
+official Kaggle GPU execution is preserved.
+
 ## Failure behavior
 
 | Failure | User-visible result | Persisted result |
@@ -203,8 +219,9 @@ submission blockers:
 The [competition deadline](https://www.kaggle.com/competitions/build-with-gemma-gdgunn/rules)
 is **3 August 2026 at 23:59 WAT** (22:59 UTC; 4 August at 00:59 CEST). The
 internal publication target is **3 August at 18:00 WAT**.
-Before any public release or submission, the entrant must approve the owned media,
-repository visibility, final claims, rule acceptance, and Kaggle submission.
+Before any public release or submission, the entrant must approve the generated
+media provenance and audio redistribution, repository visibility, final claims,
+rule acceptance, and Kaggle submission.
 Student-status verification, payout/KYC, banking, and tax steps also remain human
 responsibilities.
 

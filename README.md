@@ -62,7 +62,7 @@ competition draft.
 | Five clean and five blocked hero trials | Not run after the first required bad-scene failure |
 | Inference after disconnecting Wi-Fi | Not tested; no offline claim |
 | Offline reload | Not claimed unless the stronger test passes |
-| Fixture ownership and publication rights | Human approval required in [`docs/FIXTURE_RIGHTS.md`](docs/FIXTURE_RIGHTS.md) |
+| Fixture provenance and publication rights | Deterministic synthetic pack generated and hashed; human public-use approval still required in [`docs/FIXTURE_RIGHTS.md`](docs/FIXTURE_RIGHTS.md) |
 
 The interface reserves approximately 3.65 GB for the selected model cache. The
 actual transfer size and first-load duration must be measured against the pinned
@@ -89,6 +89,7 @@ npm run typecheck
 npm run lint
 npm test
 npm run build:pages
+node scripts/verify-fixture-pack.mjs fixtures/private/generated-v1
 ```
 
 The Pages artifact is emitted to `dist/client`. Its service worker precaches the
@@ -156,9 +157,12 @@ tests/                       Rendered release-shell checks
 [`notebooks/scenepatch_gemma4.ipynb`](notebooks/scenepatch_gemma4.ipynb) loads
 the official `google/gemma-4-E2B-it` checkpoint, declares the same three tools,
 and applies the same fail-closed policy. The browser gate did fail, so this is now
-the primary executable Gemma path. It still requires the human-approved fixture,
-a Kaggle GPU run, and captured outputs before any result can be claimed. The
-public Pages app remains a scripted fixture replay.
+the primary executable Gemma path. It is parameterized for the three controlled
+synthetic scene cases and their synthetic Flite intent clip. These inputs are
+mechanism evidence, not photographic or natural-speech performance evidence.
+The exact hashed files still require human public-use approval, a Kaggle GPU run,
+and captured outputs before any result can be claimed. The public Pages app
+remains a scripted fixture replay.
 
 ## Human-controlled release gates
 
