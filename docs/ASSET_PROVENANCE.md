@@ -19,9 +19,8 @@ produced the displayed decisions.
 
 ## Controlled notebook fixture
 
-The current notebook input bundle is stored under the ignored
-`fixtures/private/generated-v1/` directory and contains four deterministic,
-code-generated 640×512 RGB PNGs:
+The approved notebook input bundle is stored under `fixtures/generated-v1/` and
+contains four deterministic, code-generated 640×512 RGB PNGs:
 
 - `scene-before.png`;
 - `scene-after-bad.png`;
@@ -38,15 +37,14 @@ SHA-256 is
 These files are controlled synthetic mechanism inputs. They can show how the
 multimodal prompt, native tool calls, parser, and deterministic policy behave on
 those exact inputs; they cannot establish performance on photographs, natural
-speech, or physical scenes. Exact image hashes and the pending human release gate
-are recorded in `docs/FIXTURE_RIGHTS.md`.
+speech, or physical scenes. Exact hashes and the human approval record are in
+`docs/FIXTURE_RIGHTS.md`; any changed bytes require renewed approval.
 
 ## Release boundary
 
-The synthetic bundle remains private and **NOT APPROVED FOR PUBLIC USE** until the
-entrant verifies the image-generator provenance, Flite and `slt` licensing and
-attribution requirements, exact hashes, and all declarations in
-`docs/FIXTURE_RIGHTS.md`. Repository code remains Apache-2.0 licensed; that code
-license must not be presented as automatic approval or relicensing of every media
-asset or dependency. The final demo video is a separate pending asset requiring
+The exact four PNGs and one WAV file were approved for public use in the
+ScenePatch repository, Kaggle dataset/notebook, and within a future demo video at
+`2026-08-01 22:03:40 CEST (UTC+02:00)`. That approval is hash-bound and does not
+relicense third-party tooling or approve changed media. Repository code remains
+Apache-2.0 licensed. The final demo video is a separate pending asset requiring
 its own filename, hash, privacy review, and human approval.

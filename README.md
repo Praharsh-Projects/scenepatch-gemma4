@@ -62,7 +62,7 @@ competition draft.
 | Five clean and five blocked hero trials | Not run after the first required bad-scene failure |
 | Inference after disconnecting Wi-Fi | Not tested; no offline claim |
 | Offline reload | Not claimed unless the stronger test passes |
-| Fixture provenance and publication rights | Deterministic synthetic pack generated and hashed; human public-use approval still required in [`docs/FIXTURE_RIGHTS.md`](docs/FIXTURE_RIGHTS.md) |
+| Fixture provenance and publication rights | At 2026-08-01 22:03:40 CEST, the entrant approved public use of the exact five hashed generated-v1 media files for the repository, Kaggle dataset/notebook, and demo video; see [`docs/FIXTURE_RIGHTS.md`](docs/FIXTURE_RIGHTS.md) |
 
 The interface reserves approximately 3.65 GB for the selected model cache. The
 actual transfer size and first-load duration must be measured against the pinned
@@ -89,7 +89,7 @@ npm run typecheck
 npm run lint
 npm test
 npm run build:pages
-node scripts/verify-fixture-pack.mjs fixtures/private/generated-v1
+node scripts/verify-fixture-pack.mjs fixtures/generated-v1
 ```
 
 The Pages artifact is emitted to `dist/client`. Its service worker precaches the
@@ -160,17 +160,30 @@ and applies the same fail-closed policy. The browser gate did fail, so this is n
 the primary executable Gemma path. It is parameterized for the three controlled
 synthetic scene cases and their synthetic Flite intent clip. These inputs are
 mechanism evidence, not photographic or natural-speech performance evidence.
-The exact hashed files still require human public-use approval, a Kaggle GPU run,
-and captured outputs before any result can be claimed. The public Pages app
-remains a scripted fixture replay.
+The exact five hashed media files have human public-use approval. A private
+[Kaggle dataset](https://www.kaggle.com/datasets/praharshpulla/scenepatch-controlled-fixture)
+now contains exactly six files: those five media files plus their manifest. A
+private draft
+[Kaggle notebook](https://www.kaggle.com/code/praharshpulla/scenepatch-gemma-4)
+has the approved notebook imported, that dataset attached, and Kaggle's official
+Google Gemma 4 Transformers `gemma-4-e2b-it` V1 model attached. It has no
+published version and no executed result evidence. Kaggle currently blocks GPU
+and internet access until the entrant completes phone verification, so a GPU
+run and captured outputs are still required before any result can be claimed.
+The public Pages app remains a scripted fixture replay.
 
 ## Human-controlled release gates
 
-The entrant must personally approve fixture/media rights, repository visibility,
-all measured claims, the final video and writeup, Kaggle rule acceptance and
-submission, student-status evidence, payout/KYC, banking, and taxes. Bracketed
+The exact five fixture media files are approved for the stated public uses, and
+the Kaggle rules page shows that the entrant has accepted the rules. This does
+not make the entry submission-ready. The entrant must still complete Kaggle
+phone verification, execute and publish the notebook with preserved evidence,
+review all measured claims, create and approve the final video and writeup, and
+personally make the final competition submission. Student-status evidence,
+payout/KYC, banking, and taxes also remain human-controlled. Bracketed
 `[REQUIRED]` fields in the submission pack are deliberate blockers, not missing
-marketing copy.
+marketing copy. No demo video currently exists, and no final video has been
+approved.
 
 Copyright 2026 ScenePatch contributors. Code is available under the
 [Apache License 2.0](LICENSE). Gemma model weights are separately licensed and

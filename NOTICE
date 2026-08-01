@@ -36,8 +36,10 @@ Controlled fixture tooling:
 - CMU Flite 2.3-current, including the `cmu_us_slt` voice — Carnegie Mellon
   University and contributors — BSD-like license recorded at
   https://github.com/festvox/flite/blob/6c9f20dc915b17f5619340069889db0aa007fcdc/COPYING.
-  The generated audio is not committed to this repository and remains subject
-  to the explicit public-use approval gate in docs/FIXTURE_RIGHTS.md.
+  The exact generated audio in `fixtures/generated-v1/intent.wav` is committed
+  under the hash-bound public-use approval recorded in
+  `docs/FIXTURE_RIGHTS.md`; no endorsement by Carnegie Mellon University or its
+  contributors is implied.
 
 The full resolved JavaScript dependency inventory and versions are recorded in
 package-lock.json. All third-party copyrights and license terms remain with

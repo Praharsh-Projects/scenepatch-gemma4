@@ -1,10 +1,12 @@
 # ScenePatch controlled-fixture provenance and release record
 
-> **HUMAN APPROVAL REQUIRED.** This record documents the current controlled
-> synthetic fixture; it is not evidence of release approval. Until the entrant
-> completes the approval section, every listed asset has status **NOT APPROVED
-> FOR PUBLIC USE** and must remain out of the public repository, Kaggle dataset,
-> public notebook, and final demo video.
+> **EXACT FIVE-FILE MEDIA APPROVAL RECORDED.** At `2026-08-01 22:03:40 CEST
+> (UTC+02:00)`, this record captured the user's explicit approval of public use for
+> the four PNGs and one WAV file identified by the hashes below. That approval
+> covers use of those five files in the ScenePatch repository, Kaggle
+> dataset/notebook, and a future demo video. It does not approve a demo-video file
+> that does not yet exist, accept the competition rules, authorize final
+> submission, or establish a verified legal identity.
 
 ## Fixture identity
 
@@ -25,8 +27,8 @@
   marker, Corrected, and Occluded in the same browser session, and save each
   before/after fixture image. Canvas bytes can vary across browser, OS, and font
   versions, so the signed hashes—not regeneration—identify the release files.
-- Intended release, after approval: public Kaggle fixture/notebook, repository
-  documentation, and demo video
+- Approved release scope for the exact five hashes: ScenePatch repository, public
+  Kaggle fixture/notebook, and use within a future demo video
 
 These files are controlled mechanism inputs. They are not photographs, natural
 speech, evidence of a physical desk, or proof that ScenePatch works reliably on
@@ -34,18 +36,19 @@ real-world media.
 
 ## Asset inventory
 
-The current files are stored under the ignored
-`fixtures/private/generated-v1/` directory. If any file is regenerated, edited,
-or normalized again, record its new hash and repeat human approval.
+The approved release files are stored under `fixtures/generated-v1/`; an ignored
+review copy remains under `fixtures/private/generated-v1/`. If any media file is
+regenerated, edited, or normalized again, record its new hash and repeat human
+approval.
 
-| Asset | Required content | Current private filename | SHA-256 | Public-use status |
+| Asset | Required content | Public filename | SHA-256 | Public-use status |
 |---|---|---|---|---|
-| Before generated PNG | White sketchbook centered; red marker left; blue marker right; yellow sticky-note pad above | `scene-before.png` | `4822982cf8d254fa3b4579ab40c72131627c92a2780f77da7490ad865b7d83cf` | **NOT APPROVED** |
-| Bad-after generated PNG | Red marker above sketchbook; blue marker removed; other layout unchanged | `scene-after-bad.png` | `71210ba4d515b1abe4a1c3e134e22fd9d9b2c7f1f1ea7b1396e96b155e2e2120` | **NOT APPROVED** |
-| Corrected-after generated PNG | Red marker above; blue marker restored right; other layout unchanged | `scene-after-corrected.png` | `9a22ca251072aee8d79d84ba4f4562f46400a5fec651bc3dae19ba4929e60d03` | **NOT APPROVED** |
-| Occluded-after generated PNG | Controlled scene with deliberately obscured comparison evidence | `scene-after-occluded.png` | `b16ff8c9d41b65522fc0d72c8a9b108f72353c54315950fa4460c23e6370b5d3` | **NOT APPROVED** |
-| Synthesized intent audio | Exact intent sentence below | `intent.wav` | `d99fe8ce17149e9c8bc94e90467a95d3e1f5b98ba67e7fbc7f2c8fe9f201b020` | **NOT APPROVED** |
-| Demo video | Final screen recording with synthetic-fixture disclosure | `[REQUIRED]` | `[REQUIRED]` | **NOT APPROVED** |
+| Before generated PNG | White sketchbook centered; red marker left; blue marker right; yellow sticky-note pad above | `scene-before.png` | `4822982cf8d254fa3b4579ab40c72131627c92a2780f77da7490ad865b7d83cf` | **APPROVED FOR PUBLIC USE** |
+| Bad-after generated PNG | Red marker above sketchbook; blue marker removed; other layout unchanged | `scene-after-bad.png` | `71210ba4d515b1abe4a1c3e134e22fd9d9b2c7f1f1ea7b1396e96b155e2e2120` | **APPROVED FOR PUBLIC USE** |
+| Corrected-after generated PNG | Red marker above; blue marker restored right; other layout unchanged | `scene-after-corrected.png` | `9a22ca251072aee8d79d84ba4f4562f46400a5fec651bc3dae19ba4929e60d03` | **APPROVED FOR PUBLIC USE** |
+| Occluded-after generated PNG | Controlled scene with deliberately obscured comparison evidence | `scene-after-occluded.png` | `b16ff8c9d41b65522fc0d72c8a9b108f72353c54315950fa4460c23e6370b5d3` | **APPROVED FOR PUBLIC USE** |
+| Synthesized intent audio | Exact intent sentence below | `intent.wav` | `d99fe8ce17149e9c8bc94e90467a95d3e1f5b98ba67e7fbc7f2c8fe9f201b020` | **APPROVED FOR PUBLIC USE** |
+| Demo video | Final screen recording with synthetic-fixture disclosure | `[REQUIRED]` | `[REQUIRED]` | **PENDING — NO VIDEO EXISTS** |
 
 Intent sentence:
 
@@ -68,21 +71,22 @@ does not itself establish public-distribution rights. The official Flite
 `COPYING` file describes the collection as BSD-like and grants use and
 distribution without restriction subject to its retained notices and
 non-endorsement conditions. No separate synthesized-output restriction was found
-in that file. The entrant must still review that source and approve distribution
-of this exact output; this record is not legal advice.
+in that file. The user stated that they reviewed the Flite terms and explicitly
+approved public distribution of this exact output; this record is not legal advice.
 
 ## Human declarations
 
-The entrant must review and affirm every item; an unchecked item blocks public
-release.
+Checked items are supported by the user's exact approval message together with
+the verified provenance and hashes already recorded here. Unchecked items were not
+expressly covered and must not be inferred.
 
-- [ ] I verified that the scene generator and compositions are original or that I
+- [x] I verified that the scene generator and compositions are original or that I
   have documented permission to publish them.
-- [ ] I reproduced or inspected the four PNGs and confirmed that their hashes match
+- [x] I reproduced or inspected the four PNGs and confirmed that their hashes match
   this inventory.
-- [ ] I confirmed that the PNGs contain no copied, stock, scraped, photographic,
+- [x] I confirmed that the PNGs contain no copied, stock, scraped, photographic,
   employer-owned, university-restricted, or other third-party-controlled media.
-- [ ] I verified the applicable licenses and attribution requirements for CMU
+- [x] I verified the applicable licenses and attribution requirements for CMU
   Flite, commit `6c9f20dc915b17f5619340069889db0aa007fcdc`, and the `slt` voice, and confirmed
   that the exact audio output may be published in the intended competition
   contexts.
@@ -93,45 +97,56 @@ release.
   downloaded, mirrored, and retained by third parties.
 - [ ] I reviewed the final demo video for private information, notifications,
   tokens, browser-profile details, and third-party media.
-- [ ] I approve publication of only the exact hashed assets listed here, under the
+- [x] I approve publication of only the exact hashed assets listed here, under the
   media terms recorded below; repository code remains Apache-2.0 licensed.
 
 Media license and required attributions:
 
-Proposed record for human verification: scene PNGs are original project output
-and may be released under Apache-2.0 with the repository. Intent text is original
-project text. Intent audio was synthesized with CMU Flite 2.3-current and the
-`cmu_us_slt` voice from commit
+Human-confirmed record: scene PNGs are original project output and are approved
+for public use in the ScenePatch repository; repository code remains Apache-2.0
+licensed. Intent text is original project text. Intent audio was synthesized with
+CMU Flite 2.3-current and the `cmu_us_slt` voice from commit
 `6c9f20dc915b17f5619340069889db0aa007fcdc`; retain the Carnegie Mellon
 University and contributor notices and do not imply endorsement. Official terms:
 <https://github.com/festvox/flite/blob/6c9f20dc915b17f5619340069889db0aa007fcdc/COPYING>.
 
-`[HUMAN TO CONFIRM OR AMEND THIS RECORD]`
+This record was confirmed by the exact typed approval quoted below at
+`2026-08-01 22:03:40 CEST (UTC+02:00)`.
 
 ## Processing and retention approval
 
-- [ ] I approve uploading the approved, nonprivate synthetic fixture files to
+- [x] I approve uploading the approved, nonprivate synthetic fixture files to
   Kaggle for cloud-hosted notebook execution.
-- [ ] I approve retaining the approved synthetic inputs in the public
+- [x] I approve retaining the approved synthetic inputs in the public
   reproducibility package.
 - [ ] I understand that Kaggle notebook execution is not on-device processing and
   does not prove that arbitrary user media remains local.
 - [ ] I understand that the application discards live-user audio by default, while
   approved reproducibility media would be intentionally distributed.
 
-## Final approval gate
+## Recorded approval and remaining gates
 
-By signing, the entrant confirms the declarations above for the exact hashes in
-the inventory. A typed placeholder, assistant-generated signature, or inferred
-consent is invalid.
+- Kaggle profile display name: `Praharsh Pulla` (shown in the attached Kaggle
+  profile screenshot; not independently verified as a legal identity)
+- Legal identity: **not independently verified by this record**
+- Kaggle username: `praharshpulla` (shown in the attached screenshot)
+- Approval-record timestamp: `2026-08-01 22:03:40 CEST (UTC+02:00)`
+- Signature method: exact typed user message, recorded verbatim below
 
-- Entrant/rights holder legal name: `[HUMAN TO COMPLETE]`
-- Signature: `[HUMAN TO COMPLETE]`
-- Date and time with timezone: `[HUMAN TO COMPLETE]`
-- Kaggle username: `[HUMAN TO COMPLETE]`
-- Final decision: `[ ] APPROVED  [ ] REJECTED`
+> I reviewed the ScenePatch generated-v1 bundle and Flite terms. I approve public
+> use of these exact five hashed files for the ScenePatch repository, Kaggle
+> dataset/notebook, and demo video.
 
-**Gate rule:** only a human-selected `APPROVED` decision, complete identity fields,
-all checked declarations, a completed license/attribution record, and hashes that
-match the release files change the media status to approved. Otherwise stop
-publication. Do not substitute copied or unreviewed media.
+- Exact five-file media decision: `[x] APPROVED  [ ] REJECTED`
+- Demo-video asset decision: `[ ] APPROVED  [ ] REJECTED` — **PENDING; no video
+  file or hash exists**
+- Competition rules acceptance: **VERIFIED ACCEPTED** on the signed-in Kaggle
+  rules page at `2026-08-01 22:25 CEST (UTC+02:00)`; this is separate from the
+  media approval above.
+- Final Kaggle submission: **PENDING; not covered by this media approval**
+
+**Scope rule:** this approval applies only while all five released files match the
+hashes in the inventory. Any regenerated or edited file requires a new hash and
+new approval. The typed message permits the approved five files to appear in a
+future demo video; it does not approve that future recording, its contents, or its
+publication. Unchecked acknowledgments remain unconfirmed and must not be inferred.

@@ -12,8 +12,11 @@ creative scene changed the way its owner intended.
 > **Current fallback state:** the pinned browser q4f16 runtime loaded and emitted
 > native calls, but missed the blue-marker removal and proposed a commit. The
 > public Pages build is therefore a labeled scripted replay. The official
-> `google/gemma-4-E2B-it` notebook is the executable model path; its hashed-fixture
-> run, outputs, media approval, and public URL remain submission blockers.
+> `google/gemma-4-E2B-it` notebook is the executable model path. The exact five
+> hashed media files were approved for public use at 2026-08-01 22:03:40 CEST.
+> A private Kaggle dataset and private draft notebook now exist, but the notebook
+> has zero executed result evidence and no published version. GPU and internet
+> remain blocked until the entrant completes Kaggle phone verification.
 
 ## The problem
 
@@ -54,8 +57,12 @@ The release fixture is deliberately synthetic for reproducibility and provenance
 four deterministic code-generated 640×512 PNGs represent the controlled scenes,
 and a 4.755-second CMU Flite `slt` clip renders the instruction. These are mechanism
 inputs, not photographs, natural speech, evidence of a physical desk, or proof of
-real-world accuracy. Their exact hashes and pending human release gate are recorded
-in [`docs/FIXTURE_RIGHTS.md`](FIXTURE_RIGHTS.md).
+real-world accuracy. At 2026-08-01 22:03:40 CEST, the entrant approved public use
+of these exact five hashed media files for the repository, Kaggle dataset/notebook,
+and demo video. Their hashes and approval scope are recorded in
+[`docs/FIXTURE_RIGHTS.md`](FIXTURE_RIGHTS.md). This source-media approval does not
+approve a final demo video. No demo video currently exists, and no final video
+has been approved.
 
 ## Why Gemma 4 is essential
 
@@ -117,13 +124,21 @@ There is no ScenePatch account or application API. This release makes no offline
 inference claim; the public experience does not run the browser model.
 
 The primary notebook path is cloud-hosted on Kaggle and will process only this
-nonprivate synthetic fixture after human approval. It does not demonstrate that
-arbitrary user media remains on-device.
+approved, nonprivate synthetic fixture. Its private
+[dataset](https://www.kaggle.com/datasets/praharshpulla/scenepatch-controlled-fixture)
+contains exactly six files: the five approved media files plus their manifest.
+The private draft
+[notebook](https://www.kaggle.com/code/praharshpulla/scenepatch-gemma-4)
+has the approved notebook imported, the dataset attached, and Kaggle's official
+Google Gemma 4 Transformers `gemma-4-e2b-it` V1 model attached. It has no
+published version or executed result evidence. Kaggle currently blocks GPU and
+internet until the entrant completes phone verification. This notebook does not
+demonstrate that arbitrary user media remains on-device.
 
 ## Evidence, limitations, and impact
 
 The release evaluation will use three comparisons built from the same controlled,
-code-generated fixture after human approval: a clean intended change, an intended
+code-generated and approved fixture: a clean intended change, an intended
 change plus an unexplained removal, and an occluded scene. The latter two are
 expected to fail closed. The planned gate is five consecutive correct clean
 proposals and five consecutive correct blocks, but those official-checkpoint runs
@@ -167,6 +182,7 @@ multi-gigabyte model also makes “local” different from “instantly offline.
 
 - Live app: [ScenePatch on GitHub Pages](https://praharsh-projects.github.io/scenepatch-gemma4/)
 - Source and architecture: [public Apache-2.0 repository](https://github.com/Praharsh-Projects/scenepatch-gemma4)
+- Private notebook draft (not judge-accessible): [Kaggle draft](https://www.kaggle.com/code/praharshpulla/scenepatch-gemma-4)
 - Reproducibility notebook: `[REQUIRED PUBLIC KAGGLE NOTEBOOK URL]`
 - Two-minute demonstration: `[REQUIRED PUBLIC VIDEO URL]`
 - Gemma function-calling reference: [Google AI for Developers](https://ai.google.dev/gemma/docs/capabilities/text/function-calling-gemma4)
@@ -175,11 +191,12 @@ multi-gigabyte model also makes “local” different from “instantly offline.
 
 The [official deadline](https://www.kaggle.com/competitions/build-with-gemma-gdgunn/rules)
 is **3 August 2026 at 23:59 WAT** (22:59 UTC; 4 August at 00:59 CEST); the internal
-target is **18:00 WAT**. Before submission, the entrant must personally approve
-the generated-scene provenance and hashes, CMU Flite and `slt` voice licensing and
-attribution, public repository and media release, measured claims, rule acceptance,
-and the final Kaggle submission. Executed notebook results and the final video also
-remain pending. Eligibility proof, KYC/payout, banking, and tax actions remain with
-the human entrant.
+target is **18:00 WAT**. The entrant approved the exact five fixture media files
+for the stated public uses at 2026-08-01 22:03:40 CEST, and the Kaggle rules page
+shows the rules are accepted. Remaining gates are Kaggle phone verification,
+executed and preserved notebook results, a published notebook version, review of
+every measured claim, a created and approved final video, anonymous access to all
+submission links, and the entrant's final Kaggle submission. Eligibility proof,
+KYC/payout, banking, and tax actions remain with the human entrant.
 AI-assisted code and documentation must receive human review; no result may be
 inferred from this draft.

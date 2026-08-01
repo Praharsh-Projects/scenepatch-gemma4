@@ -1,0 +1,76 @@
+{
+  "schemaVersion": 1,
+  "fixtureId": "scenepatch-generated-v1",
+  "createdAt": "2026-08-01T19:35:37Z",
+  "intent": "Move the red marker above the sketchbook. Keep everything else exactly where it is.",
+  "scope": "Controlled synthetic mechanism evidence only; not photographic, natural-speech, or real-world performance evidence.",
+  "publicUseStatus": "approved-for-public-use",
+  "approvalRecordedAt": "2026-08-01T22:03:40+02:00",
+  "sceneGenerator": {
+    "source": "app/lib/media.ts#createSyntheticArtDeskFixture",
+    "sourceCommit": "321b3c4d016fb2fd588ba5a9cf93c6f1df5cdd83",
+    "sourceSha256": "a13e2cfc97ff99f5962ee1c928422f15b02a1912cb84e3a8bcfc1b2abc6bb4b9",
+    "exportMethod": "ScenePatch capture UI canvas fixtures exported from one browser session",
+    "browser": "Google Chrome 150.0.7871.187",
+    "operatingSystem": "macOS 26.5.2",
+    "hardwareClass": "Mac16,8; Apple M4 Pro; 24 GB",
+    "canvasSize": {
+      "width": 640,
+      "height": 512
+    }
+  },
+  "audioGenerator": {
+    "engine": "CMU Flite",
+    "engineVersion": "flite-2.3-current Mar 2022",
+    "sourceCommit": "6c9f20dc915b17f5619340069889db0aa007fcdc",
+    "voice": "cmu_us_slt",
+    "sourceRepository": "https://github.com/festvox/flite",
+    "licenseFile": "https://github.com/festvox/flite/blob/6c9f20dc915b17f5619340069889db0aa007fcdc/COPYING",
+    "normalization": "ffmpeg pcm_s16le, 16000 Hz, mono, metadata removed",
+    "durationSeconds": 4.755
+  },
+  "files": [
+    {
+      "path": "scene-before.png",
+      "role": "before",
+      "mediaType": "image/png",
+      "width": 640,
+      "height": 512,
+      "sha256": "4822982cf8d254fa3b4579ab40c72131627c92a2780f77da7490ad865b7d83cf"
+    },
+    {
+      "path": "scene-after-bad.png",
+      "role": "after-bad-unexplained-removal",
+      "mediaType": "image/png",
+      "width": 640,
+      "height": 512,
+      "sha256": "71210ba4d515b1abe4a1c3e134e22fd9d9b2c7f1f1ea7b1396e96b155e2e2120"
+    },
+    {
+      "path": "scene-after-corrected.png",
+      "role": "after-clean-intended-change",
+      "mediaType": "image/png",
+      "width": 640,
+      "height": 512,
+      "sha256": "9a22ca251072aee8d79d84ba4f4562f46400a5fec651bc3dae19ba4929e60d03"
+    },
+    {
+      "path": "scene-after-occluded.png",
+      "role": "after-uncertain-occluded-evidence",
+      "mediaType": "image/png",
+      "width": 640,
+      "height": 512,
+      "sha256": "b16ff8c9d41b65522fc0d72c8a9b108f72353c54315950fa4460c23e6370b5d3"
+    },
+    {
+      "path": "intent.wav",
+      "role": "synthetic-spoken-intent",
+      "mediaType": "audio/wav",
+      "codec": "pcm_s16le",
+      "sampleRateHz": 16000,
+      "channels": 1,
+      "durationSeconds": 4.755,
+      "sha256": "d99fe8ce17149e9c8bc94e90467a95d3e1f5b98ba67e7fbc7f2c8fe9f201b020"
+    }
+  ]
+}

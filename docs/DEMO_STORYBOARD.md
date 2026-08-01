@@ -3,8 +3,11 @@
 > **Recording gate:** the browser q4f16 path failed the required missing-marker
 > trial. Do not present the Pages replay as live inference. Record the final take
 > only after the official-checkpoint Kaggle notebook has run on the exact hashed
-> synthetic fixture, every shown output has been preserved, and the entrant has
-> completed the media approval gate. None of those steps is implied complete here.
+> synthetic fixture and every shown output has been preserved. The exact five
+> source-media files were approved for the repository, Kaggle dataset/notebook,
+> and demo video at 2026-08-01 22:03:40 CEST. The notebook run and final-video
+> review are not complete. No demo video currently exists, and no final video
+> has been approved.
 
 ## Controlled synthetic hero fixture
 
@@ -22,9 +25,25 @@ mono, `4.755 s`. Its SHA-256 is
 `d99fe8ce17149e9c8bc94e90467a95d3e1f5b98ba67e7fbc7f2c8fe9f201b020`.
 
 These are controlled synthetic mechanism inputs, not real photographs, natural
-speech, or evidence of a physical scene. Public use remains blocked until the
-entrant completes [`FIXTURE_RIGHTS.md`](FIXTURE_RIGHTS.md), including the Flite and
-`slt` license/attribution review.
+speech, or evidence of a physical scene. The entrant approved public use of the
+exact five hashed media files for the repository, Kaggle dataset/notebook, and
+demo video at 2026-08-01 22:03:40 CEST; the approval record, provenance, and Flite
+and `slt` attribution details are in [`FIXTURE_RIGHTS.md`](FIXTURE_RIGHTS.md).
+That approval covers the source media, not a final demo video that does not yet
+exist.
+
+## Kaggle recording status
+
+The private
+[fixture dataset](https://www.kaggle.com/datasets/praharshpulla/scenepatch-controlled-fixture)
+contains exactly six files: the five approved media files plus the manifest. The
+private draft
+[notebook](https://www.kaggle.com/code/praharshpulla/scenepatch-gemma-4)
+has the approved notebook imported, the fixture dataset attached, and Kaggle's
+official Google Gemma 4 Transformers `gemma-4-e2b-it` V1 model attached. It has
+no published version and zero executed result evidence. Kaggle currently blocks
+GPU and internet until the entrant completes phone verification, so no notebook
+output is available to record yet.
 
 ## Shot list and narration
 
@@ -66,7 +85,7 @@ show the actual elapsed time; retain the uncut run and its hash.
 | Generated PNG hashes and generator source/revision | PNG hashes and the `app/lib/media.ts` source commit are recorded in `FIXTURE_RIGHTS.md` |
 | Audio generator | CMU Flite `2.3-current`; commit `6c9f20dc915b17f5619340069889db0aa007fcdc`; voice `slt` |
 | Final audio | `pcm_s16le`; 16 kHz; mono; `4.755 s`; SHA-256 `d99fe8ce17149e9c8bc94e90467a95d3e1f5b98ba67e7fbc7f2c8fe9f201b020` |
-| Human media/license approval | `[REQUIRED]` |
+| Human media/license approval | Approved for the exact five hashed source files at 2026-08-01 22:03:40 CEST; see `FIXTURE_RIGHTS.md` |
 | Kaggle image, GPU, Python, PyTorch, Transformers | `[REQUIRED]` |
 | Official model ID/revision | `[REQUIRED]` |
 | Bad-scene raw output, result, and timing | `[REQUIRED]` |
@@ -76,9 +95,9 @@ show the actual elapsed time; retain the uncut run and its hash.
 
 ## Final human approval gate
 
-Before upload, the entrant must personally confirm the generated-scene provenance
-and hashes, Flite and `slt` license/attribution requirements, exact notebook
-outputs and measured claims, anonymous access to every link, absence of tokens and
-private paths, and the final duration. Media approval, publishing the video,
-activating the Kaggle notebook, accepting the rules, and submitting remain pending
-human actions.
+The exact five source-media files are approved for the stated public uses, and
+the Kaggle rules page shows the rules are accepted. Before upload, the entrant
+must still complete Kaggle phone verification, execute and publish the notebook,
+confirm its exact outputs and measured claims, verify anonymous access to every
+link, check for tokens and private paths, review the final duration and completed
+video, publish that approved video, and personally submit the competition entry.

@@ -8,7 +8,7 @@ decisions.
 
 ## Controlled notebook inputs
 
-`private/generated-v1/` contains the current controlled mechanism fixture:
+`generated-v1/` contains the approved public controlled mechanism fixture:
 
 - four deterministic code-generated 640×512 scene PNGs; and
 - `intent.wav`, synthesized with CMU Flite `2.3-current`, voice `slt`, from Flite
@@ -23,11 +23,14 @@ evidence of a physical scene. An executed notebook run can provide evidence only
 for the multimodal/tool-calling mechanism on these exact files, not general
 real-world accuracy.
 
-## Publication gate
+## Publication record
 
-The `private/` directory is ignored by Git. Do not copy this bundle into a public
-fixture set, Kaggle dataset/notebook, or video until `docs/FIXTURE_RIGHTS.md`
-contains matching hashes, a completed image-generator record, human-verified
-Flite and `slt` license/attribution terms, all checked declarations, and a signed
-`APPROVED` decision. Those approvals, executed Kaggle outputs, and the final demo
-video are still pending.
+At `2026-08-01 22:03:40 CEST (UTC+02:00)`, the owner approved public use of the
+exact four PNG hashes and one WAV hash recorded in
+`docs/FIXTURE_RIGHTS.md`. `generated-v1/manifest.json` binds those hashes to the
+generator and Flite provenance. Any regenerated or edited media file requires a
+new hash and new approval.
+
+This approval makes the controlled fixture reproducible; it does not turn a
+notebook run into a benchmark or approve a future demo-video recording. Kaggle
+execution evidence and the final video remain separate gates.

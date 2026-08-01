@@ -167,9 +167,9 @@ browser profile. Record the browser version, hardware, cache state, and timestam
   red-marker move. A second disappearance-focused pass also failed to recover
   the omission. This is an unsafe false commit, so the browser release gate is
   failed rather than reported as a success.
-- The TTS clip is engineering evidence only and is not an approved competition
-  fixture. No five-by-five reliability or offline sequence was attempted after
-  the core bad-scene failure.
+- The exact generated TTS clip is approved as controlled competition-fixture
+  media. No five-by-five reliability or offline sequence was attempted after the
+  core browser bad-scene failure.
 
 ### Controlled submission fixture pack — 1 August 2026
 
@@ -178,14 +178,14 @@ Four 640×512 PNG scenes were exported from
 one common before scene plus bad, corrected, and occluded after scenes. The fixed
 intent sentence was synthesized with the open-source CMU Flite 2.3-current
 `cmu_us_slt` voice, then normalized to 16-bit PCM, 16 kHz mono (4.755 seconds).
-The ignored local `fixtures/private/generated-v1/manifest.json` freezes every
-filename, media property, generator revision, and SHA-256 hash.
+The public `fixtures/generated-v1/manifest.json` freezes every filename, media
+property, generator revision, SHA-256 hash, and the approval-record timestamp.
 
 This pack is controlled synthetic mechanism evidence. It does not show model
-performance on photographs, natural human speech, or physical scenes. It remains
-**NOT APPROVED FOR PUBLIC USE** until the entrant reviews the exact files and
-completes `docs/FIXTURE_RIGHTS.md`; notebook results remain unclaimed until an
-official Kaggle GPU execution is preserved.
+performance on photographs, natural human speech, or physical scenes. The exact
+five media hashes are approved for the release contexts recorded in
+`docs/FIXTURE_RIGHTS.md`; notebook results remain unclaimed until an official
+Kaggle execution is preserved.
 
 ## Failure behavior
 
