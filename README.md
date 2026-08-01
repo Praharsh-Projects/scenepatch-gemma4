@@ -57,9 +57,12 @@ competition draft.
 | Strict tool policy and fail-closed storage | Automated unit tests |
 | Production and GitHub Pages builds | Automated build and rendered-HTML tests |
 | Anonymous public app/repository | HTTP 200 and fresh-browser flow verified 31 July 2026 |
+| Anonymous public Kaggle notebook/dataset | Explicit V3 notebook and output URLs plus dataset returned HTTP 200 |
+| Competition linkage/submission | Notebook linked; no submission made (`0/5`, “No Submissions”) |
 | Browser image + voice Gemma mechanism | Loaded, inferred, and parsed on M4 Pro; semantic gate failed |
 | Missing-marker block | **Failed:** browser model proposed a clean commit |
-| Five clean and five blocked hero trials | Not run after the first required bad-scene failure |
+| Official-checkpoint controlled-fixture run | Competition-linked V3 (`339575640`) completed its batch: bad and occluded blocked by host policy; corrected remained pending human confirmation |
+| Five clean and five blocked hero trials | Not met; the notebook evidence is one pass and the required five-consecutive M4 Pro gate was not run |
 | Inference after disconnecting Wi-Fi | Not tested; no offline claim |
 | Offline reload | Not claimed unless the stronger test passes |
 | Fixture provenance and publication rights | At 2026-08-01 22:03:40 CEST, the entrant approved public use of the exact five hashed generated-v1 media files for the repository, Kaggle dataset/notebook, and demo video; see [`docs/FIXTURE_RIGHTS.md`](docs/FIXTURE_RIGHTS.md) |
@@ -160,30 +163,65 @@ and applies the same fail-closed policy. The browser gate did fail, so this is n
 the primary executable Gemma path. It is parameterized for the three controlled
 synthetic scene cases and their synthetic Flite intent clip. These inputs are
 mechanism evidence, not photographic or natural-speech performance evidence.
-The exact five hashed media files have human public-use approval. A private
+The exact five hashed media files have human public-use approval. The public
 [Kaggle dataset](https://www.kaggle.com/datasets/praharshpulla/scenepatch-controlled-fixture)
-now contains exactly six files: those five media files plus their manifest. A
-private draft
-[Kaggle notebook](https://www.kaggle.com/code/praharshpulla/scenepatch-gemma-4)
+contains exactly six files: those five media files plus their manifest. Its page
+includes a provenance subtitle and description, with license metadata set to
+“Other (specified in description).” The public, competition-linked
+[executed Kaggle notebook V3](https://www.kaggle.com/code/praharshpulla/scenepatch-gemma-4?scriptVersionId=339575640)
 has the approved notebook imported, that dataset attached, and Kaggle's official
-Google Gemma 4 Transformers `gemma-4-e2b-it` V1 model attached. It has no
-published version and no executed result evidence. Kaggle currently blocks GPU
-and internet access until the entrant completes phone verification, so a GPU
-run and captured outputs are still required before any result can be claimed.
-The public Pages app remains a scripted fixture replay.
+Google Gemma 4 Transformers `gemma-4-e2b-it` V1 model attached. Kaggle version
+ID `202340794` / script version `339575640`, labeled **COMPLETE BATCH**, finished
+in 4m11s in the UI. The explicit V3 notebook and
+[output](https://www.kaggle.com/code/praharshpulla/scenepatch-gemma-4/output?scriptVersionId=339575640)
+URLs both returned HTTP 200 anonymously.
+
+The bare notebook URL currently defaults to V1, so release evidence must use the
+explicit V3 URL above. V2 (`339574570`) is a source-only quick version. No
+competition entry has been submitted (`0/5`, “No Submissions”).
+
+The tracked source notebook SHA-256 is
+`108604448f368c1fcd583ed79b7b4cc0d6d10ce69542c64ab06415348cf4ad90`.
+The downloaded V3 executed notebook SHA-256 is
+`0c97048417864c5d2c5dfdac835f23f87f6e1ba840b42eccde1a68434bab2a43`.
+It contains 15 cells: 10 code cells, eight output-bearing code cells, and seven
+output files. Model loading took `83.636302238` seconds.
+
+| Case | Valid / retry | Tool turns | Total inference | Final host decision |
+|---|---:|---:|---:|---|
+| Bad | yes / no | 3 | 15.295668616 s | `blocked_by_deterministic_policy` |
+| Corrected | yes / no | 2 | 8.560120476 s | `pending_human_confirmation` |
+| Occluded | yes / no | 3 | 14.269275557 s | `blocked_by_deterministic_policy` |
+
+The verified saved-output JSON SHA-256 values are
+`1b520ccc7914938ec51b3e85972609b0c9f62ca7b29084da625573741e39be28`
+(bad),
+`54bc5eef1258d72d4e3eab65c1dd9a2ef9ecaf3c8d892c13357659d1d5a54cd8`
+(corrected), and
+`6093a9456651ea4bd142971163648b6a227f2ee807128af660e6a066e8ee348d`
+(occluded).
+
+This is controlled-fixture functional evidence, not general visual detection or
+model-accuracy evidence. The notebook's deterministic, hash-gated host preflight
+supplies the labels `red_marker`, `blue_marker`, and `occlusion`; the approved
+transcript supplies the intended label `red_marker`. Gemma labeled the red
+marker, blue marker, and occlusion as intended and proposed commits. The host
+policy overrode the bad and occluded proposals. V3 and its output package are
+verified, and the notebook and dataset are public. The public Pages app remains
+a scripted fixture replay.
 
 ## Human-controlled release gates
 
 The exact five fixture media files are approved for the stated public uses, and
 the Kaggle rules page shows that the entrant has accepted the rules. This does
-not make the entry submission-ready. The entrant must still complete Kaggle
-phone verification, execute and publish the notebook with preserved evidence,
-review all measured claims, create and approve the final video and writeup, and
-personally make the final competition submission. Student-status evidence,
-payout/KYC, banking, and taxes also remain human-controlled. Bracketed
-`[REQUIRED]` fields in the submission pack are deliberate blockers, not missing
-marketing copy. No demo video currently exists, and no final video has been
-approved.
+not make the entry submission-ready. The entrant must still review all measured
+claims, approve and publish the final video and writeup, verify the final video
+link anonymously, and personally make the final competition submission.
+Student-status evidence, payout/KYC, banking, and taxes also remain
+human-controlled. Unresolved release fields in the submission pack are deliberate
+blockers, not missing marketing copy. A 1:52 local review draft is aligned to
+competition-linked V3 (`339575640`) and its saved timings. It remains unapproved
+and unpublished; no final demo video has been approved or published.
 
 Copyright 2026 ScenePatch contributors. Code is available under the
 [Apache License 2.0](LICENSE). Gemma model weights are separately licensed and

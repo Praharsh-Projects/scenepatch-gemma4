@@ -184,8 +184,47 @@ property, generator revision, SHA-256 hash, and the approval-record timestamp.
 This pack is controlled synthetic mechanism evidence. It does not show model
 performance on photographs, natural human speech, or physical scenes. The exact
 five media hashes are approved for the release contexts recorded in
-`docs/FIXTURE_RIGHTS.md`; notebook results remain unclaimed until an official
-Kaggle execution is preserved.
+`docs/FIXTURE_RIGHTS.md`.
+
+### Competition-linked Kaggle V3 evidence — 2 August 2026
+
+Public [Kaggle V3](https://www.kaggle.com/code/praharshpulla/scenepatch-gemma-4?scriptVersionId=339575640),
+Kaggle version ID `202340794` / script version `339575640`, is labeled **COMPLETE
+BATCH** and finished in 4m11s in the UI. Its explicit notebook and
+[output](https://www.kaggle.com/code/praharshpulla/scenepatch-gemma-4/output?scriptVersionId=339575640)
+URLs returned HTTP 200 anonymously. The downloaded executed notebook SHA-256 is
+`0c97048417864c5d2c5dfdac835f23f87f6e1ba840b42eccde1a68434bab2a43`.
+It has 15 cells: 10 code cells, eight output-bearing code cells, and seven output
+files. Model loading took `83.636302238` seconds. Total inference for the bad
+case took `15.295668616` seconds over three tool turns and was blocked by
+deterministic host policy; the corrected case took `8.560120476` seconds over two
+turns and remained pending human confirmation; the occluded case took
+`14.269275557` seconds over three turns and was blocked by deterministic host
+policy.
+
+The saved-output JSON SHA-256 values are:
+
+- bad: `1b520ccc7914938ec51b3e85972609b0c9f62ca7b29084da625573741e39be28`;
+- corrected: `54bc5eef1258d72d4e3eab65c1dd9a2ef9ecaf3c8d892c13357659d1d5a54cd8`;
+- occluded: `6093a9456651ea4bd142971163648b6a227f2ee807128af660e6a066e8ee348d`.
+
+Gemma recorded the supplied `red_marker`, `blue_marker`, and `occlusion` labels
+as intended and proposed commits. The hash-gated host policy overrode the bad
+and occluded proposals because only `red_marker` is approved by the transcript.
+This is controlled policy evidence, not independent Gemma classification or
+general vision accuracy. The public
+[fixture dataset](https://www.kaggle.com/datasets/praharshpulla/scenepatch-controlled-fixture)
+contains the exact five approved media files plus their manifest. Its page has a
+provenance subtitle and description and reports “Other (specified in
+description)” as its license metadata.
+
+The notebook is linked to the Build with Gemma competition, but no entry has
+been submitted (`0/5`, “No Submissions”). The bare notebook URL currently
+defaults to V1, and V2 (`339574570`) is a source-only quick version; executable
+evidence must use the explicit V3 URL.
+
+The 1:52 local review video is aligned to competition-linked V3 (`339575640`)
+and its saved timings. It is unapproved and unpublished.
 
 ## Failure behavior
 
@@ -214,14 +253,17 @@ submission blockers:
 | Reliability | Five block and five clean trials on the M4 Pro | **Stopped after required bad-scene failure** |
 | Offline behavior | Exact test sequence and result | **Not tested; not claimed** |
 | Privacy | Network trace showing destinations and payload behavior | **Not yet inspected** |
-| Fixture rights | Signed approval in `docs/FIXTURE_RIGHTS.md` | **Human approval pending** |
+| Saved Kaggle execution | Version ID plus downloaded output hashes | **Passed—competition-linked V3 (`339575640`) completed full batch and output package verified** |
+| Public Kaggle artifacts | Anonymous notebook/output/dataset URL checks | **Passed—explicit V3 notebook and output plus dataset returned HTTP 200** |
+| Competition linkage | Linked notebook and submission status | **Linked; no submission made (`0/5`, “No Submissions”)** |
+| Fixture rights | Signed approval in `docs/FIXTURE_RIGHTS.md` | **Passed—exact five media hashes approved for repository, Kaggle, and demo video use** |
 
 The [competition deadline](https://www.kaggle.com/competitions/build-with-gemma-gdgunn/rules)
 is **3 August 2026 at 23:59 WAT** (22:59 UTC; 4 August at 00:59 CEST). The
 internal publication target is **3 August at 18:00 WAT**.
-Before any public release or submission, the entrant must approve the generated
-media provenance and audio redistribution, repository visibility, final claims,
-rule acceptance, and Kaggle submission.
+Before submission, the entrant must review the final claims, approve and publish
+the final video, verify its public link anonymously, and personally complete the
+Kaggle submission.
 Student-status verification, payout/KYC, banking, and tax steps also remain human
 responsibilities.
 

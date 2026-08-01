@@ -4,8 +4,8 @@
 > (UTC+02:00)`, this record captured the user's explicit approval of public use for
 > the four PNGs and one WAV file identified by the hashes below. That approval
 > covers use of those five files in the ScenePatch repository, Kaggle
-> dataset/notebook, and a future demo video. It does not approve a demo-video file
-> that does not yet exist, accept the competition rules, authorize final
+> dataset/notebook, and a demo video. It does not approve the current review-video
+> draft, accept the competition rules, authorize final
 > submission, or establish a verified legal identity.
 
 ## Fixture identity
@@ -48,7 +48,7 @@ approval.
 | Corrected-after generated PNG | Red marker above; blue marker restored right; other layout unchanged | `scene-after-corrected.png` | `9a22ca251072aee8d79d84ba4f4562f46400a5fec651bc3dae19ba4929e60d03` | **APPROVED FOR PUBLIC USE** |
 | Occluded-after generated PNG | Controlled scene with deliberately obscured comparison evidence | `scene-after-occluded.png` | `b16ff8c9d41b65522fc0d72c8a9b108f72353c54315950fa4460c23e6370b5d3` | **APPROVED FOR PUBLIC USE** |
 | Synthesized intent audio | Exact intent sentence below | `intent.wav` | `d99fe8ce17149e9c8bc94e90467a95d3e1f5b98ba67e7fbc7f2c8fe9f201b020` | **APPROVED FOR PUBLIC USE** |
-| Demo video | Final screen recording with synthetic-fixture disclosure | `[REQUIRED]` | `[REQUIRED]` | **PENDING — NO VIDEO EXISTS** |
+| Demo video review draft | Rendered 1:52 demonstration with synthetic-fixture and saved-run disclosures | `ScenePatch-demo-review-v3.mp4` | `73586989e041648fed9e8ce1966e90940fe64b661e83a0114409ead71a58faf7` | **REVIEW DRAFT — NOT APPROVED OR PUBLISHED** |
 
 Intent sentence:
 
@@ -138,8 +138,9 @@ This record was confirmed by the exact typed approval quoted below at
 > dataset/notebook, and demo video.
 
 - Exact five-file media decision: `[x] APPROVED  [ ] REJECTED`
-- Demo-video asset decision: `[ ] APPROVED  [ ] REJECTED` — **PENDING; no video
-  file or hash exists**
+- Demo-video asset decision: `[ ] APPROVED  [ ] REJECTED` — **PENDING; review
+  draft SHA-256 is
+  `73586989e041648fed9e8ce1966e90940fe64b661e83a0114409ead71a58faf7`**
 - Competition rules acceptance: **VERIFIED ACCEPTED** on the signed-in Kaggle
   rules page at `2026-08-01 22:25 CEST (UTC+02:00)`; this is separate from the
   media approval above.
@@ -148,5 +149,5 @@ This record was confirmed by the exact typed approval quoted below at
 **Scope rule:** this approval applies only while all five released files match the
 hashes in the inventory. Any regenerated or edited file requires a new hash and
 new approval. The typed message permits the approved five files to appear in a
-future demo video; it does not approve that future recording, its contents, or its
+demo video; it does not approve the current review draft, its contents, or its
 publication. Unchecked acknowledgments remain unconfirmed and must not be inferred.
