@@ -10,10 +10,14 @@
   "scripts": {
     "dev": "WRANGLER_LOG_PATH=.wrangler/wrangler.log vinext dev",
     "build": "WRANGLER_LOG_PATH=.wrangler/wrangler.log vinext build",
-    "build:pages": "SCENEPATCH_STATIC_EXPORT=true NEXT_PUBLIC_SCENEPATCH_REPLAY_MODE=true WRANGLER_LOG_PATH=.wrangler/wrangler.log vinext build && node scripts/inject-pages-precache.mjs && node scripts/verify-pages-replay.mjs",
+    "build:pages": "node scripts/clean-pages-dist.mjs && SCENEPATCH_STATIC_EXPORT=true NEXT_PUBLIC_SCENEPATCH_REPLAY_MODE=true WRANGLER_LOG_PATH=.wrangler/wrangler.log vinext build && node scripts/inject-pages-precache.mjs && node scripts/verify-pages-replay.mjs",
     "start": "WRANGLER_LOG_PATH=.wrangler/wrangler.log vinext start",
-    "test": "npm run test:unit && npm run test:render",
+    "test": "npm run test:unit && npm run test:scripts && npm run test:fixtures && npm run test:render",
     "test:unit": "vitest run --config vitest.config.ts",
+    "test:scripts": "node --test tests/clean-pages-dist.test.mjs && python3 -m unittest discover -s tests -p 'validate_release_test.py'",
+    "test:fixtures": "node scripts/verify-fixture-pack.mjs fixtures/generated-v1",
+    "test:notebook": "python3 scripts/validate_release.py notebook",
+    "test:release": "python3 scripts/validate_release.py all",
     "test:render": "npm run build && node --test tests/rendered-html.test.mjs",
     "lint": "eslint . --ignore-pattern dist --ignore-pattern .next",
     "typecheck": "tsc --noEmit"
