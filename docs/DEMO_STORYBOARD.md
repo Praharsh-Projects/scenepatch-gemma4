@@ -7,7 +7,7 @@
 > source-media files were approved for the repository, Kaggle dataset/notebook,
 > and demo video at 2026-08-01 22:03:40 CEST. The exact release video was watched
 > and approved for public upload at 2026-08-02 10:46:06 CEST. The notebook,
-> dataset, and video have public release URLs.
+> dataset, and video have anonymously verified public release URLs.
 
 ## Controlled synthetic hero fixture
 
@@ -83,7 +83,9 @@ been submitted (`0/5`, “No Submissions”).
 was rendered against explicit public V3 `339575640` and its bad/corrected/
 occluded total-inference timings of `15.295668616`, `8.560120476`, and
 `14.269275557` seconds. The entrant watched this exact hash and approved its
-public upload at 2026-08-02 10:46:06 CEST.
+public upload at 2026-08-02 10:46:06 CEST. At 2026-08-02 10:55:02 CEST, an
+anonymous download returned HTTP 200, `video/mp4`, 2,740,118 bytes, and the same
+SHA-256.
 
 ## Shot list and narration
 
@@ -138,7 +140,7 @@ show the actual elapsed time; retain the uncut run and its hash.
 | Corrected-scene result | Valid; no retry; 2 turns; 8.560120476 s total inference; `pending_human_confirmation` |
 | Occluded-scene result | Valid; no retry; 3 turns; 14.269275557 s total inference; `blocked_by_deterministic_policy` |
 | Approved release location/hash | `ScenePatch-demo-review-v3.mp4` / `73586989e041648fed9e8ce1966e90940fe64b661e83a0114409ead71a58faf7` (competition-linked V3 basis) |
-| Public two-minute video URL | [ScenePatch 1:52 demonstration](https://praharsh-projects.github.io/scenepatch-gemma4/demo/ScenePatch-demo-review-v3.mp4) |
+| Public two-minute video URL | [ScenePatch 1:52 demonstration](https://praharsh-projects.github.io/scenepatch-gemma4/demo/ScenePatch-demo-review-v3.mp4) — anonymously hash-verified |
 
 ## Final submission gate
 

@@ -49,7 +49,7 @@ approval.
 | Corrected-after generated PNG | Red marker above; blue marker restored right; other layout unchanged | `scene-after-corrected.png` | `9a22ca251072aee8d79d84ba4f4562f46400a5fec651bc3dae19ba4929e60d03` | **APPROVED FOR PUBLIC USE** |
 | Occluded-after generated PNG | Controlled scene with deliberately obscured comparison evidence | `scene-after-occluded.png` | `b16ff8c9d41b65522fc0d72c8a9b108f72353c54315950fa4460c23e6370b5d3` | **APPROVED FOR PUBLIC USE** |
 | Synthesized intent audio | Exact intent sentence below | `intent.wav` | `d99fe8ce17149e9c8bc94e90467a95d3e1f5b98ba67e7fbc7f2c8fe9f201b020` | **APPROVED FOR PUBLIC USE** |
-| Demo video release | Rendered 1:52 demonstration with synthetic-fixture and saved-run disclosures | `ScenePatch-demo-review-v3.mp4` | `73586989e041648fed9e8ce1966e90940fe64b661e83a0114409ead71a58faf7` | **APPROVED FOR PUBLIC UPLOAD** |
+| Demo video release | Rendered 1:52 demonstration with synthetic-fixture and saved-run disclosures | `ScenePatch-demo-review-v3.mp4` | `73586989e041648fed9e8ce1966e90940fe64b661e83a0114409ead71a58faf7` | **APPROVED, PUBLISHED, AND HASH-VERIFIED** |
 
 Intent sentence:
 
@@ -149,6 +149,9 @@ This record was confirmed by the exact typed approval quoted below at
 - Demo-video asset decision: `[x] APPROVED  [ ] REJECTED`
 - Public release URL:
   <https://praharsh-projects.github.io/scenepatch-gemma4/demo/ScenePatch-demo-review-v3.mp4>
+- Anonymous publication verification: `2026-08-02 10:55:02 CEST (UTC+02:00)`;
+  HTTP 200, `Content-Type: video/mp4`, `Content-Length: 2740118`, downloaded
+  SHA-256 `73586989e041648fed9e8ce1966e90940fe64b661e83a0114409ead71a58faf7`
 - Competition rules acceptance: **VERIFIED ACCEPTED** on the signed-in Kaggle
   rules page at `2026-08-01 22:25 CEST (UTC+02:00)`; this is separate from the
   media approval above.

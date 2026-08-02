@@ -13,7 +13,8 @@ creative scene changed the way its owner intended.
 > `google/gemma-4-E2B-it` notebook is the executable model path. The exact five
 > hashed media files were approved for public use at 2026-08-01 22:03:40 CEST.
 > The exact 1:52 demonstration was watched and approved for public upload at
-> 2026-08-02 10:46:06 CEST.
+> 2026-08-02 10:46:06 CEST, then anonymously downloaded and hash-verified after
+> publication.
 > Competition-linked Kaggle V3 (`339575640`) completed its full batch in 4m11s.
 > Its explicit notebook and output URLs are public and anonymously verified; no
 > competition entry has been submitted.
@@ -193,10 +194,9 @@ The [official deadline](https://www.kaggle.com/competitions/build-with-gemma-gdg
 is **3 August 2026 at 23:59 WAT** (22:59 UTC; 4 August at 00:59 CEST); the internal
 target is **18:00 WAT**. The entrant approved the exact five fixture media files
 for the stated public uses at 2026-08-01 22:03:40 CEST, and the Kaggle rules page
-shows the rules are accepted. Public notebook and dataset access have been
-verified anonymously. Remaining gates are review of every measured claim, an
-anonymous access check for the published video, and the entrant's final Kaggle
-submission.
+shows the rules are accepted. Public notebook, dataset, and demo-video access
+have been verified anonymously. Remaining gates are review of every measured
+claim and the entrant's final Kaggle submission.
 Eligibility proof, KYC/payout, banking,
 and tax actions remain with the human entrant.
 AI-assisted code and documentation must receive human review; no result may be
