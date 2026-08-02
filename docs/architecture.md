@@ -223,8 +223,9 @@ been submitted (`0/5`, “No Submissions”). The bare notebook URL currently
 defaults to V1, and V2 (`339574570`) is a source-only quick version; executable
 evidence must use the explicit V3 URL.
 
-The 1:52 local review video is aligned to competition-linked V3 (`339575640`)
-and its saved timings. It is unapproved and unpublished.
+The approved 1:52 public demonstration is aligned to competition-linked V3
+(`339575640`) and its saved timings. Its exact SHA-256 is
+`73586989e041648fed9e8ce1966e90940fe64b661e83a0114409ead71a58faf7`.
 
 ## Failure behavior
 
@@ -255,15 +256,15 @@ submission blockers:
 | Privacy | Network trace showing destinations and payload behavior | **Not yet inspected** |
 | Saved Kaggle execution | Version ID plus downloaded output hashes | **Passed—competition-linked V3 (`339575640`) completed full batch and output package verified** |
 | Public Kaggle artifacts | Anonymous notebook/output/dataset URL checks | **Passed—explicit V3 notebook and output plus dataset returned HTTP 200** |
+| Public demonstration | Exact-hash approval plus anonymous Pages URL | **Approved—publication is tied to the Pages release** |
 | Competition linkage | Linked notebook and submission status | **Linked; no submission made (`0/5`, “No Submissions”)** |
 | Fixture rights | Signed approval in `docs/FIXTURE_RIGHTS.md` | **Passed—exact five media hashes approved for repository, Kaggle, and demo video use** |
 
 The [competition deadline](https://www.kaggle.com/competitions/build-with-gemma-gdgunn/rules)
 is **3 August 2026 at 23:59 WAT** (22:59 UTC; 4 August at 00:59 CEST). The
 internal publication target is **3 August at 18:00 WAT**.
-Before submission, the entrant must review the final claims, approve and publish
-the final video, verify its public link anonymously, and personally complete the
-Kaggle submission.
+Before submission, the entrant must review the final claims, verify the public
+video link anonymously, and personally complete the Kaggle submission.
 Student-status verification, payout/KYC, banking, and tax steps also remain human
 responsibilities.
 

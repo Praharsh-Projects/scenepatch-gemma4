@@ -12,6 +12,8 @@ creative scene changed the way its owner intended.
 > public Pages build is therefore a labeled scripted replay. The official
 > `google/gemma-4-E2B-it` notebook is the executable model path. The exact five
 > hashed media files were approved for public use at 2026-08-01 22:03:40 CEST.
+> The exact 1:52 demonstration was watched and approved for public upload at
+> 2026-08-02 10:46:06 CEST.
 > Competition-linked Kaggle V3 (`339575640`) completed its full batch in 4m11s.
 > Its explicit notebook and output URLs are public and anonymously verified; no
 > competition entry has been submitted.
@@ -44,8 +46,8 @@ The reproducible fixture contains four deterministic 640×512 PNGs and a
 inputs, not photographs, natural speech, or real-world accuracy evidence. At
 2026-08-01 22:03:40 CEST, the entrant approved their exact five hashes for the
 repository, Kaggle dataset/notebook, and demo video. Details are recorded in
-[`docs/FIXTURE_RIGHTS.md`](FIXTURE_RIGHTS.md). This source-media approval does not
-approve a final demo video. No final demo video has been approved or published.
+[`docs/FIXTURE_RIGHTS.md`](FIXTURE_RIGHTS.md). The entrant separately watched and
+approved the exact 1:52 release video and its SHA-256 at 2026-08-02 10:46:06 CEST.
 
 ## Why Gemma 4 is essential
 
@@ -153,8 +155,8 @@ human-confirmation gate, not that Gemma detected or classified those changes
 correctly. It is one exact controlled-fixture pass, not model accuracy. The
 planned five-consecutive clean/block gate on the M4 Pro was not met.
 
-A 1:52 local review video is aligned to competition-linked V3 (`339575640`) and
-its saved timings. It is unapproved and unpublished.
+The approved 1:52 public demonstration is aligned to competition-linked V3
+(`339575640`) and its saved timings.
 
 On 31 July, the M4 Pro browser path loaded warm in 5.0 seconds and emitted native
 calls, but proposed a clean commit for the missing blue marker even after a
@@ -182,7 +184,7 @@ model also makes “local” different from “instantly offline.”
 - Source and architecture: [public Apache-2.0 repository](https://github.com/Praharsh-Projects/scenepatch-gemma4)
 - Reproducibility notebook: [public competition-linked V3](https://www.kaggle.com/code/praharshpulla/scenepatch-gemma-4?scriptVersionId=339575640)
 - Controlled fixture: [public Kaggle dataset](https://www.kaggle.com/datasets/praharshpulla/scenepatch-controlled-fixture)
-- Two-minute demonstration: `[REQUIRED PUBLIC VIDEO URL]`
+- Two-minute demonstration: [approved 1:52 ScenePatch video](https://praharsh-projects.github.io/scenepatch-gemma4/demo/ScenePatch-demo-review-v3.mp4)
 - Gemma function-calling reference: [Google AI for Developers](https://ai.google.dev/gemma/docs/capabilities/text/function-calling-gemma4)
 
 ## Pre-submission human gate
@@ -193,8 +195,8 @@ target is **18:00 WAT**. The entrant approved the exact five fixture media files
 for the stated public uses at 2026-08-01 22:03:40 CEST, and the Kaggle rules page
 shows the rules are accepted. Public notebook and dataset access have been
 verified anonymously. Remaining gates are review of every measured claim, an
-approved and published final video, anonymous access to that final link, and the
-entrant's final Kaggle submission.
+anonymous access check for the published video, and the entrant's final Kaggle
+submission.
 Eligibility proof, KYC/payout, banking,
 and tax actions remain with the human entrant.
 AI-assisted code and documentation must receive human review; no result may be

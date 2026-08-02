@@ -32,5 +32,7 @@ generator and Flite provenance. Any regenerated or edited media file requires a
 new hash and new approval.
 
 This approval makes the controlled fixture reproducible; it does not turn a
-notebook run into a benchmark or approve a future demo-video recording. Kaggle
-execution evidence and the final video remain separate gates.
+notebook run into a benchmark. The exact 1:52 release video was separately
+watched and approved for public upload at `2026-08-02 10:46:06 CEST (UTC+02:00)`;
+its SHA-256 and verbatim approval are recorded in `docs/FIXTURE_RIGHTS.md`.
+Kaggle execution remains mechanism evidence rather than a general accuracy gate.

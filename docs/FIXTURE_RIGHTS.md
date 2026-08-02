@@ -1,12 +1,13 @@
-# ScenePatch controlled-fixture provenance and release record
+# ScenePatch controlled-fixture and demo-video release record
 
-> **EXACT FIVE-FILE MEDIA APPROVAL RECORDED.** At `2026-08-01 22:03:40 CEST
+> **EXACT MEDIA APPROVALS RECORDED.** At `2026-08-01 22:03:40 CEST
 > (UTC+02:00)`, this record captured the user's explicit approval of public use for
 > the four PNGs and one WAV file identified by the hashes below. That approval
 > covers use of those five files in the ScenePatch repository, Kaggle
-> dataset/notebook, and a demo video. It does not approve the current review-video
-> draft, accept the competition rules, authorize final
-> submission, or establish a verified legal identity.
+> dataset/notebook, and a demo video. At `2026-08-02 10:46:06 CEST (UTC+02:00)`,
+> the user separately confirmed that they watched the exact 1:52 video identified
+> below and approved its public upload. Neither approval authorizes final Kaggle
+> submission or establishes a verified legal identity.
 
 ## Fixture identity
 
@@ -28,7 +29,7 @@
   before/after fixture image. Canvas bytes can vary across browser, OS, and font
   versions, so the signed hashes—not regeneration—identify the release files.
 - Approved release scope for the exact five hashes: ScenePatch repository, public
-  Kaggle fixture/notebook, and use within a future demo video
+  Kaggle fixture/notebook, and use within the separately approved release demo
 
 These files are controlled mechanism inputs. They are not photographs, natural
 speech, evidence of a physical desk, or proof that ScenePatch works reliably on
@@ -48,7 +49,7 @@ approval.
 | Corrected-after generated PNG | Red marker above; blue marker restored right; other layout unchanged | `scene-after-corrected.png` | `9a22ca251072aee8d79d84ba4f4562f46400a5fec651bc3dae19ba4929e60d03` | **APPROVED FOR PUBLIC USE** |
 | Occluded-after generated PNG | Controlled scene with deliberately obscured comparison evidence | `scene-after-occluded.png` | `b16ff8c9d41b65522fc0d72c8a9b108f72353c54315950fa4460c23e6370b5d3` | **APPROVED FOR PUBLIC USE** |
 | Synthesized intent audio | Exact intent sentence below | `intent.wav` | `d99fe8ce17149e9c8bc94e90467a95d3e1f5b98ba67e7fbc7f2c8fe9f201b020` | **APPROVED FOR PUBLIC USE** |
-| Demo video review draft | Rendered 1:52 demonstration with synthetic-fixture and saved-run disclosures | `ScenePatch-demo-review-v3.mp4` | `73586989e041648fed9e8ce1966e90940fe64b661e83a0114409ead71a58faf7` | **REVIEW DRAFT — NOT APPROVED OR PUBLISHED** |
+| Demo video release | Rendered 1:52 demonstration with synthetic-fixture and saved-run disclosures | `ScenePatch-demo-review-v3.mp4` | `73586989e041648fed9e8ce1966e90940fe64b661e83a0114409ead71a58faf7` | **APPROVED FOR PUBLIC UPLOAD** |
 
 Intent sentence:
 
@@ -95,7 +96,7 @@ expressly covered and must not be inferred.
   natural speech, or physical scenes.
 - [ ] I understand that public repository and Kaggle assets may be copied,
   downloaded, mirrored, and retained by third parties.
-- [ ] I reviewed the final demo video for private information, notifications,
+- [x] I reviewed the final demo video for private information, notifications,
   tokens, browser-profile details, and third-party media.
 - [x] I approve publication of only the exact hashed assets listed here, under the
   media terms recorded below; repository code remains Apache-2.0 licensed.
@@ -138,16 +139,22 @@ This record was confirmed by the exact typed approval quoted below at
 > dataset/notebook, and demo video.
 
 - Exact five-file media decision: `[x] APPROVED  [ ] REJECTED`
-- Demo-video asset decision: `[ ] APPROVED  [ ] REJECTED` — **PENDING; review
-  draft SHA-256 is
-  `73586989e041648fed9e8ce1966e90940fe64b661e83a0114409ead71a58faf7`**
+- Demo-video approval timestamp: `2026-08-02 10:46:06 CEST (UTC+02:00)`
+- Demo-video approval message, recorded verbatim:
+
+> perfect. I watched ScenePatch-demo-review-v3.mp4 and approve public upload of
+> SHA-256
+> 73586989e041648fed9e8ce1966e90940fe64b661e83a0114409ead71a58faf7.
+
+- Demo-video asset decision: `[x] APPROVED  [ ] REJECTED`
+- Public release URL:
+  <https://praharsh-projects.github.io/scenepatch-gemma4/demo/ScenePatch-demo-review-v3.mp4>
 - Competition rules acceptance: **VERIFIED ACCEPTED** on the signed-in Kaggle
   rules page at `2026-08-01 22:25 CEST (UTC+02:00)`; this is separate from the
   media approval above.
 - Final Kaggle submission: **PENDING; not covered by this media approval**
 
-**Scope rule:** this approval applies only while all five released files match the
-hashes in the inventory. Any regenerated or edited file requires a new hash and
-new approval. The typed message permits the approved five files to appear in a
-demo video; it does not approve the current review draft, its contents, or its
-publication. Unchecked acknowledgments remain unconfirmed and must not be inferred.
+**Scope rule:** the first approval applies only while all five fixture files match
+their inventory hashes. The second approval applies only to the exact video hash
+listed above. Any regenerated or edited file requires a new hash and new approval.
+Unchecked acknowledgments remain unconfirmed and must not be inferred.

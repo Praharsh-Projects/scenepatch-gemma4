@@ -1,12 +1,13 @@
 # ScenePatch two-minute fallback demo storyboard
 
 > **Recording gate:** the browser q4f16 path failed the required missing-marker
-> trial. Do not present the Pages replay as live inference. The current 1:52 local
-> review cut uses explicit public competition-linked V3 (`339575640`) and its
-> saved timings; it is unapproved and unpublished. The exact five
+> trial. Do not present the Pages replay as live inference. The approved 1:52
+> release uses explicit public competition-linked V3 (`339575640`) and its
+> saved timings. The exact five
 > source-media files were approved for the repository, Kaggle dataset/notebook,
-> and demo video at 2026-08-01 22:03:40 CEST. The notebook and dataset are public
-> and anonymously verified. No final video has been approved or published.
+> and demo video at 2026-08-01 22:03:40 CEST. The exact release video was watched
+> and approved for public upload at 2026-08-02 10:46:06 CEST. The notebook,
+> dataset, and video have public release URLs.
 
 ## Controlled synthetic hero fixture
 
@@ -28,7 +29,8 @@ speech, or evidence of a physical scene. The entrant approved public use of the
 exact five hashed media files for the repository, Kaggle dataset/notebook, and
 demo video at 2026-08-01 22:03:40 CEST; the approval record, provenance, and Flite
 and `slt` attribution details are in [`FIXTURE_RIGHTS.md`](FIXTURE_RIGHTS.md).
-That approval covers the source media, not the current review-only video draft.
+The entrant separately watched and approved the exact release video hash at
+2026-08-02 10:46:06 CEST.
 
 ## Kaggle recording status
 
@@ -74,13 +76,14 @@ The bare notebook URL defaults to V1; V2 (`339574570`) is source-only. Record an
 cite explicit V3. The notebook is linked to Build with Gemma, but no entry has
 been submitted (`0/5`, “No Submissions”).
 
-## Local review cut status
+## Approved release status
 
 `ScenePatch-demo-review-v3.mp4` (1:52; SHA-256
 `73586989e041648fed9e8ce1966e90940fe64b661e83a0114409ead71a58faf7`)
 was rendered against explicit public V3 `339575640` and its bad/corrected/
 occluded total-inference timings of `15.295668616`, `8.560120476`, and
-`14.269275557` seconds. It is local, unapproved, and unpublished.
+`14.269275557` seconds. The entrant watched this exact hash and approved its
+public upload at 2026-08-02 10:46:06 CEST.
 
 ## Shot list and narration
 
@@ -134,13 +137,12 @@ show the actual elapsed time; retain the uncut run and its hash.
 | Bad-scene result | Valid; no retry; 3 turns; 15.295668616 s total inference; `blocked_by_deterministic_policy` |
 | Corrected-scene result | Valid; no retry; 2 turns; 8.560120476 s total inference; `pending_human_confirmation` |
 | Occluded-scene result | Valid; no retry; 3 turns; 14.269275557 s total inference; `blocked_by_deterministic_policy` |
-| Review draft location/hash | `ScenePatch-demo-review-v3.mp4` / `73586989e041648fed9e8ce1966e90940fe64b661e83a0114409ead71a58faf7` (competition-linked V3 basis; local, unapproved, unpublished) |
-| Public two-minute video URL | `[REQUIRED]` |
+| Approved release location/hash | `ScenePatch-demo-review-v3.mp4` / `73586989e041648fed9e8ce1966e90940fe64b661e83a0114409ead71a58faf7` (competition-linked V3 basis) |
+| Public two-minute video URL | [ScenePatch 1:52 demonstration](https://praharsh-projects.github.io/scenepatch-gemma4/demo/ScenePatch-demo-review-v3.mp4) |
 
-## Final human approval gate
+## Final submission gate
 
-The exact five source-media files are approved for the stated public uses, and
-the Kaggle rules page shows the rules are accepted. Before upload, the entrant
-must still confirm all measured claims, check for tokens and private paths,
-review the final duration and completed video, publish that approved video,
-verify its public link anonymously, and personally submit the competition entry.
+The exact five source-media files and exact release video are approved for their
+stated public uses, and the Kaggle rules page shows the rules are accepted. The
+entrant must still review all final writeup claims and personally submit the
+competition entry.

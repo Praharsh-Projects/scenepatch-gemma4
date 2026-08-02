@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import argparse
 import ast
+import hashlib
 import json
 import re
 import sys
@@ -14,6 +15,16 @@ from typing import Any
 
 REPOSITORY_ROOT = Path(__file__).resolve().parent.parent
 NOTEBOOK_PATH = REPOSITORY_ROOT / "notebooks" / "scenepatch_gemma4.ipynb"
+DEMO_VIDEO_PATH = (
+    REPOSITORY_ROOT / "public" / "demo" / "ScenePatch-demo-review-v3.mp4"
+)
+EXPECTED_DEMO_VIDEO_SHA256 = (
+    "73586989e041648fed9e8ce1966e90940fe64b661e83a0114409ead71a58faf7"
+)
+PUBLIC_DEMO_VIDEO_URL = (
+    "https://praharsh-projects.github.io/scenepatch-gemma4/"
+    "demo/ScenePatch-demo-review-v3.mp4"
+)
 EXPECTED_TOOL_NAMES = {"record_change", "commit_patch", "block_commit"}
 EXPECTED_TOOL_ARGUMENTS = {
     "record_change": {
@@ -296,11 +307,53 @@ def validate_required_placeholders(paths: list[Path] | None = None) -> str:
     return f"Verified {len(candidates)} final-facing Markdown files have no unresolved [REQUIRED] placeholders."
 
 
+def validate_demo_video(
+    path: Path = DEMO_VIDEO_PATH,
+    expected_sha256: str = EXPECTED_DEMO_VIDEO_SHA256,
+    markdown_paths: list[Path] | None = None,
+) -> str:
+    try:
+        with path.open("rb") as video:
+            digest = hashlib.file_digest(video, "sha256").hexdigest()
+    except FileNotFoundError as error:
+        raise ValidationError(f"Approved demo video is missing: {path}") from error
+    if digest != expected_sha256:
+        raise ValidationError(
+            f"Approved demo video hash mismatch: expected {expected_sha256}, found {digest}."
+        )
+
+    link_paths = markdown_paths if markdown_paths is not None else [
+        REPOSITORY_ROOT / "README.md",
+        REPOSITORY_ROOT / "docs" / "DEMO_STORYBOARD.md",
+        REPOSITORY_ROOT / "docs" / "FIXTURE_RIGHTS.md",
+        REPOSITORY_ROOT / "docs" / "KAGGLE_WRITEUP.md",
+    ]
+    missing_links: list[str] = []
+    for markdown_path in link_paths:
+        try:
+            markdown = markdown_path.read_text(encoding="utf-8")
+        except FileNotFoundError as error:
+            raise ValidationError(
+                f"Expected demo-link document is missing: {markdown_path}"
+            ) from error
+        if PUBLIC_DEMO_VIDEO_URL not in markdown:
+            missing_links.append(_display_path(markdown_path))
+    if missing_links:
+        raise ValidationError(
+            "Public demo video URL is missing from: " + ", ".join(missing_links)
+        )
+
+    return (
+        f"Verified approved demo video SHA-256 {digest} and public URL references "
+        f"in {len(link_paths)} release documents."
+    )
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument(
         "check",
-        choices=("all", "notebook", "placeholders"),
+        choices=("all", "notebook", "placeholders", "demo"),
         nargs="?",
         default="all",
     )
@@ -311,6 +364,8 @@ def main() -> int:
             print(validate_notebook(), flush=True)
         if arguments.check in {"all", "placeholders"}:
             print(validate_required_placeholders(), flush=True)
+        if arguments.check in {"all", "demo"}:
+            print(validate_demo_video(), flush=True)
     except ValidationError as error:
         print(f"Release validation failed: {error}", file=sys.stderr)
         return 1

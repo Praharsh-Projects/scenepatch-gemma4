@@ -1,15 +1,19 @@
 from __future__ import annotations
 
+import hashlib
 import json
 import tempfile
 import unittest
 from pathlib import Path
 
 from scripts.validate_release import (
+    EXPECTED_DEMO_VIDEO_SHA256,
     INTENTIONAL_TEMPLATE_MARKER,
     NOTEBOOK_PATH,
+    PUBLIC_DEMO_VIDEO_URL,
     ValidationError,
     _python_source_without_leading_magic,
+    validate_demo_video,
     validate_notebook,
     validate_required_placeholders,
 )
@@ -69,6 +73,31 @@ class LeadingMagicTests(unittest.TestCase):
 
 
 class ReleaseValidationTests(unittest.TestCase):
+    def test_current_demo_has_approved_hash_and_public_links(self) -> None:
+        message = validate_demo_video()
+        self.assertIn(EXPECTED_DEMO_VIDEO_SHA256, message)
+
+    def test_modified_demo_video_fails(self) -> None:
+        with tempfile.TemporaryDirectory() as temporary_directory:
+            video = Path(temporary_directory) / "modified.mp4"
+            video.write_bytes(b"not the approved ScenePatch video")
+            with self.assertRaisesRegex(ValidationError, "hash mismatch"):
+                validate_demo_video(video, markdown_paths=[])
+
+    def test_missing_public_demo_link_fails(self) -> None:
+        with tempfile.TemporaryDirectory() as temporary_directory:
+            directory = Path(temporary_directory)
+            video = directory / "approved.mp4"
+            video.write_bytes(b"approved fixture")
+            markdown = directory / "release.md"
+            markdown.write_text("No release URL yet.\n", encoding="utf-8")
+            expected = hashlib.sha256(video.read_bytes()).hexdigest()
+            with self.assertRaisesRegex(ValidationError, "URL is missing"):
+                validate_demo_video(video, expected, [markdown])
+
+            markdown.write_text(PUBLIC_DEMO_VIDEO_URL + "\n", encoding="utf-8")
+            validate_demo_video(video, expected, [markdown])
+
     def test_current_notebook_has_exact_tool_contract(self) -> None:
         message = validate_notebook()
         self.assertIn("exactly three tool declarations", message)

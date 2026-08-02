@@ -43,8 +43,9 @@ speech, or physical scenes. Exact hashes and the human approval record are in
 ## Release boundary
 
 The exact four PNGs and one WAV file were approved for public use in the
-ScenePatch repository, Kaggle dataset/notebook, and within a future demo video at
+ScenePatch repository, Kaggle dataset/notebook, and within the release demo at
 `2026-08-01 22:03:40 CEST (UTC+02:00)`. That approval is hash-bound and does not
 relicense third-party tooling or approve changed media. Repository code remains
-Apache-2.0 licensed. The final demo video is a separate pending asset requiring
-its own filename, hash, privacy review, and human approval.
+Apache-2.0 licensed. The entrant separately watched and approved the exact 1:52
+demo video at `2026-08-02 10:46:06 CEST (UTC+02:00)`; its SHA-256 is
+`73586989e041648fed9e8ce1966e90940fe64b661e83a0114409ead71a58faf7`.

@@ -6,6 +6,7 @@ deterministic TypeScript policy blocks unexplained or uncertain changes and
 requires a person to confirm every clean commit.
 
 [Open the public app](https://praharsh-projects.github.io/scenepatch-gemma4/) ·
+[Watch the 1:52 demonstration](https://praharsh-projects.github.io/scenepatch-gemma4/demo/ScenePatch-demo-review-v3.mp4) ·
 [Read the architecture](docs/architecture.md) ·
 [Inspect the reproducibility notebook](notebooks/scenepatch_gemma4.ipynb) ·
 [Review the Kaggle writeup draft](docs/KAGGLE_WRITEUP.md) ·
@@ -58,6 +59,7 @@ competition draft.
 | Production and GitHub Pages builds | Automated build and rendered-HTML tests |
 | Anonymous public app/repository | HTTP 200 and fresh-browser flow verified 31 July 2026 |
 | Anonymous public Kaggle notebook/dataset | Explicit V3 notebook and output URLs plus dataset returned HTTP 200 |
+| Approved public demonstration | Exact 1:52 H.264/AAC file, SHA-256 `73586989e041648fed9e8ce1966e90940fe64b661e83a0114409ead71a58faf7`, hosted with the Pages release |
 | Competition linkage/submission | Notebook linked; no submission made (`0/5`, “No Submissions”) |
 | Browser image + voice Gemma mechanism | Loaded, inferred, and parsed on M4 Pro; semantic gate failed |
 | Missing-marker block | **Failed:** browser model proposed a clean commit |
@@ -212,16 +214,12 @@ a scripted fixture replay.
 
 ## Human-controlled release gates
 
-The exact five fixture media files are approved for the stated public uses, and
-the Kaggle rules page shows that the entrant has accepted the rules. This does
-not make the entry submission-ready. The entrant must still review all measured
-claims, approve and publish the final video and writeup, verify the final video
-link anonymously, and personally make the final competition submission.
-Student-status evidence, payout/KYC, banking, and taxes also remain
-human-controlled. Unresolved release fields in the submission pack are deliberate
-blockers, not missing marketing copy. A 1:52 local review draft is aligned to
-competition-linked V3 (`339575640`) and its saved timings. It remains unapproved
-and unpublished; no final demo video has been approved or published.
+The exact five fixture media files and the exact 1:52 demo video are approved for
+their stated public uses, and the Kaggle rules page shows that the entrant has
+accepted the rules. The approved video is hosted with the Pages release at the
+link above. The remaining entrant-only gate is a final review of the measured
+claims followed by the personal Kaggle submission click. Student-status evidence,
+payout/KYC, banking, and taxes also remain human-controlled.
 
 Copyright 2026 ScenePatch contributors. Code is available under the
 [Apache License 2.0](LICENSE). Gemma model weights are separately licensed and
