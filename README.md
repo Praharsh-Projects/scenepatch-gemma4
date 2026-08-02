@@ -59,7 +59,7 @@ competition draft.
 | Production and GitHub Pages builds | Automated build and rendered-HTML tests |
 | Anonymous public app/repository | HTTP 200 and fresh-browser flow verified 31 July 2026 |
 | Anonymous public Kaggle notebook/dataset | Explicit V3 notebook and output URLs plus dataset returned HTTP 200 |
-| Approved public demonstration | Exact 1:52 H.264/AAC file, SHA-256 `73586989e041648fed9e8ce1966e90940fe64b661e83a0114409ead71a58faf7`, hosted with the Pages release |
+| Approved public demonstration | Anonymous HTTP 200, `video/mp4`, 2,740,118 bytes, and exact SHA-256 `73586989e041648fed9e8ce1966e90940fe64b661e83a0114409ead71a58faf7` verified 2 August 2026 |
 | Competition linkage/submission | Notebook linked; no submission made (`0/5`, “No Submissions”) |
 | Browser image + voice Gemma mechanism | Loaded, inferred, and parsed on M4 Pro; semantic gate failed |
 | Missing-marker block | **Failed:** browser model proposed a clean commit |
@@ -217,7 +217,8 @@ a scripted fixture replay.
 The exact five fixture media files and the exact 1:52 demo video are approved for
 their stated public uses, and the Kaggle rules page shows that the entrant has
 accepted the rules. The approved video is hosted with the Pages release at the
-link above. The remaining entrant-only gate is a final review of the measured
+link above and was anonymously downloaded and hash-verified. The remaining
+entrant-only gate is a final review of the measured
 claims followed by the personal Kaggle submission click. Student-status evidence,
 payout/KYC, banking, and taxes also remain human-controlled.
 
